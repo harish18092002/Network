@@ -1,0 +1,72 @@
+<app-header></app-header>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../assets/img/bg.png');
+    background-position: center;
+    background-size: cover;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    position: fixed;
+}
+.fonts{
+  margin-top: 95px;
+  margin-left: 10px;
+  color: white;
+}
+#collect{
+  font-size: 90px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+#ur{
+  font-size: 80px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+#on{
+  font-size: 79px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+#net{
+  font-size: 85px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+#now{
+  color: black;
+  background-color: antiquewhite;
+  font-size: larger;
+  font-weight: bolder;
+  margin-top: 50px;
+margin-left: 30px;
+  cursor: pointer;
+  padding: 10px 50px;
+}
+
+ 
+</style>
+
+<body>
+  <div class=" container">
+    <div class="fonts">
+     <span id="collect">Collect </span>
+  <span id="ur">Your</span>
+  <br>
+  <span id="on">Own</span>
+  <br>
+  <span id="net">Network</span> 
+ 
+    </div>
+    <button (click)="goTologin()" id="now" >Now</button>
+  </div>
+  
+
+</body>

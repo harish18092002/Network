@@ -1,0 +1,108 @@
+<app-header></app-header>
+<style>
+    *{
+      margin: 0;
+      padding: 0;
+  }
+  .container{
+      height: 100vh;
+      width: 100%;
+      background-image: url('../../assets/img/bg.png');
+      background-position: center;
+      background-size: cover;
+      padding-left: 5%;
+      padding-right: 5%;
+      box-sizing: border-box;
+  
+  
+     
+  
+     
+  }
+  .parent{
+      box-sizing: border-box;
+      position: absolute;
+      width: 800px;
+      height: 400px;
+   left: 400px;
+      top: 206px;
+  
+      background-color: rgba(255, 255, 255, 0.4);
+      border: 1px solid #000000;
+      border-radius: 24px;
+  }
+  /* .container{
+     
+  } */
+  .parent{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+  }
+  .login{
+      border: 1px solid #000000;
+      border-radius: 10px;
+      background-color: white;
+      padding: 10px 18px 10px 18px;
+      border-style: solid;
+      background-color: white;
+      margin-left: 110px;
+      
+   
+  }
+  #usname{
+      padding: 5px 100px 5px 20px;
+      border-style: solid;
+      border-color: black;
+  margin-top: 40px;
+  border: 1px solid #000000;
+      border-radius: 10px;
+  
+  
+  }
+  #pw{
+    padding: 5px 100px 5px 20px;
+  
+  margin-top: 40px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  }
+  #mail{
+     padding: 5px 100px 5px 20px;
+  
+      margin-top: 40px;
+      border: 1px solid #000000;
+      border-radius: 10px;
+  }
+  #submit{
+      border: 1px solid #000000;
+      border-radius: 10px;
+      background-color: white;
+      margin-top: 40px;
+      margin-left: 100px;
+      padding: 10px 40px 10px 40px;
+  }
+
+ 
+  </style>
+  
+  <body>
+      <div class=" container">
+          <div class="parent">
+                 <div class="center">
+        <span class="login"><b>Signup</b></span>
+        <br>
+        <input type="email" id="mail" placeholder="Email Id"><br>
+        <input type="text" id="usname" placeholder="Username"><br>
+        <input type="password" id="pw" placeholder="Password"><br>
+        <button  id="signup" (click)="goToprofile()" id="submit"><b>Submit</b></button><br>
+          </div>
+      </div>
+           
+  
+      </div>
+    
+  
+  </body>
