@@ -1,11 +1,7 @@
 
-<style>
-  *{
-    margin: 0;
-    padding: 0;
-}
-.container{
-    height: 100vh;
+<style>   
+    .header{
+            height: 100vh;
     width: 100%;
     background-image: url('../../assets/img/bg.png');
     background-position: center;
@@ -13,12 +9,13 @@
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
+           }
 
-
-   
-
-   
-}
+           .img{
+        padding-top: 10px;
+            width: 170px;
+            cursor: pointer;
+           }
 .parent{
     box-sizing: border-box;
     position: absolute;
@@ -29,18 +26,17 @@
 
     background-color: rgba(255, 255, 255, 0.4);
     border: 1px solid #000000;
-    border-radius: 24px;
-}
-/* .container{
-   
-} */
-.parent{
+    border-radius: 24px; 
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     
 }
+
+
+
 .login{
     border: 1px solid #000000;
     border-radius: 10px;
@@ -49,9 +45,8 @@
     border-style: solid;
     background-color: white;
     margin-left: 120px;
-    
- 
 }
+
 #usname{
     padding: 5px 100px 5px 20px;
     border-style: solid;
@@ -59,9 +54,8 @@
 margin-top: 50px;
 border: 1px solid #000000;
     border-radius: 10px;
-
-
 }
+
 #pw{
     padding: 5px 100px 5px 20px;
 
@@ -69,6 +63,7 @@ border: 1px solid #000000;
     border: 1px solid #000000;
     border-radius: 10px;
 }
+
 #submit{
     border: 1px solid #000000;
     border-radius: 10px;
@@ -77,6 +72,7 @@ border: 1px solid #000000;
     margin-left: 100px;
     padding: 10px 40px 10px 40px;
 }
+
 #signup{
     border: 1px solid #000000;
     position: absolute;
@@ -88,24 +84,15 @@ border: 1px solid #000000;
     padding: 5px 30px 5px 30px;
 }
 
-body{
-      background-color: rgba(241, 165, 51, 0.98);
-      padding: 10px;
  
-      }
-        header{
-           margin-top: 10px;
-            margin-left: 50px;
-           width: 170px;
-           }
+
 </style>
 
 <body>
-    <header >
-        <img src="../../assets/img/logo.png" alt="">
+   <div class="header">
+ <img  class="img" (click)="goTohome()" src="../../assets/img/logo.png" alt="">
         <button id="signup" (click)="goTosignup()"><b>Signup</b></button>
-       </header>
-    <div class=" container">
+   </div>
         <div class="parent">
                <div class="center">
       <span class="login"><b>Login</b></span>
@@ -118,7 +105,7 @@ body{
     </div>
          
 
-    </div>
+
   
 
 </body>

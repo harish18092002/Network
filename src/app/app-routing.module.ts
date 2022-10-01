@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddprofileComponent } from './addprofile/addprofile.component';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
       {path: 'login',component: LoginComponent},
       {path: 'signup',component: SignupComponent},
       {path: 'profile', component: ProfileComponent},
+      {path: 'addprofile',component: AddprofileComponent},
       {path: '**', redirectTo: 'home'},
     ],
   },

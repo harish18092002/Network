@@ -18,5 +18,7 @@ export class LoginComponent implements OnInit {
   goToprofile() {
     this.router.navigate(['./profile']);
   }
-
+goTohome(){
+  this.router.navigate(['./home']);
+}
 }

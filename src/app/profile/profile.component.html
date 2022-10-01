@@ -1,17 +1,61 @@
-<style>
-body{
-    background-color: rgba(241, 165, 51, 0.96);
-    padding: 10px;
-    }
-      header{
-         margin-top: 10px;
-          margin-left: 50px;
-         width: 170px;
-         }
-         </style>
+
 <body>
+  <div class=" container">
     <header >
-    <img src="../../assets/img/logo.png" alt="">    
+      
+    <img class="img" (click)="goTohome()" src="../../assets/img/logo.png" alt="">    
+    <button  id="add" (click)="goToaddprofile()"><b>+ Add</b></button>
+<button id="profile"><b>Profile</b> 
+<img src="../../assets/img/pdrop-down 4.png" alt=""></button>
    </header>
+
+   <div class="centerflex">
+    <select class="ip">
+      <option>Intresting Peoples </option>
+      <option>Business Peoples</option>
+      <option>Idea Peoples </option>
+      <option>Entertainment Peoples </option>
+      <option>Talented Peoples </option>
+      <option>Startup Plan Peoples </option>
+      <option>Create Your own tag + </option>
+    </select>
+
+
+<div class="row">
+  <div class="column">
+<div class="card">
+  <div *ngFor="let user of users">
+    <div>{{user.name | json }}</div>
+    <button (click)="selectCurrentUser(users)">Select user</button>
+  </div>
+   <img src="../../assets/img/person.jpg" alt="" id="person">
+   
+</div>
+</div>
+
+<!-- <div class="column">
+  <div class="card">
+     <img src="../../assets/img/person.jpg" alt="" id="person">
+  </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+       <img src="../../assets/img/person.jpg" alt="" id="person">
+    </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+         <img src="../../assets/img/person.jpg" alt="" id="person">
+      </div>
+      </div> -->
+
+</div>
+   </div>
+   <!-- <h5>Name:{{user.name}}<br>Place{{user.place}}</h5> -->
+
+</div>
+
 
 </body>
