@@ -21,39 +21,24 @@
     </select>
 
 
-<div class="row">
-  <div class="column">
+
 <div class="card">
-  <div *ngFor="let user of users">
-    <div>{{user.name | json }}</div>
-    <button (click)="selectCurrentUser(users)">Select user</button>
-  </div>
-   <img src="../../assets/img/person.jpg" alt="" id="person">
-   
-</div>
-</div>
-
-<!-- <div class="column">
-  <div class="card">
-     <img src="../../assets/img/person.jpg" alt="" id="person">
-  </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-       <img src="../../assets/img/person.jpg" alt="" id="person">
-    </div>
-    </div>
-
-    <div class="column">
-      <div class="card">
-         <img src="../../assets/img/person.jpg" alt="" id="person">
+  <div class="contentbox" *ngFor="let user of users">
+    <div class="personcard">
+      <div class="personimage">
+<img  src="{{user.image}}">
       </div>
-      </div> -->
+<div class="content">
+  <h5 class="contenttext"><b>Name:</b>{{user.name}}<br><b>Place:</b>{{user.place}}</h5>
+
+</div>
+    </div>
+  </div>
+  
+  
 
 </div>
    </div>
-   <!-- <h5>Name:{{user.name}}<br>Place{{user.place}}</h5> -->
 
 </div>
 

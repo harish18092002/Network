@@ -1,1 +1,48 @@
-<p>addprofile works!</p>
+<div class="container">
+<header>
+    <img class="img" src="../../assets/img/logo.png" (click)="goTohome()" alt="">
+    <button  id="add"><b>+ Add</b></button>
+    <button id="profile"><b>Profile</b> 
+      
+    <img src="../../assets/img/pdrop-down 4.png" alt=""></button>
+</header>
+<div class="centerflex"> 
+<span class="addpersonaldetails">Add Personal Details</span>
+<div class="grid">
+<div class="left">
+
+    <input id="name" type="text" placeholder="Full Name">
+<select id="select">
+    <option>Select Your Tag</option>
+    <option>Business People's</option>
+    <option>Idea People's </option>
+    <option>Entertainment People's </option>
+    <option>Talented People's </option>
+    <option>Startup Plan People's </option>
+    <option>Create Your Own Tag +</option>
+</select>
+<input id="place" type="text" placeholder="Place">
+<input id="no" type="text" placeholder="Contact Number">
+<input id="insta" type="text" placeholder="Instagram">
+</div>
+
+<div class="right">
+
+    <input id="facebook" type="text" placeholder="Facebook">
+    <input id="linkedin" type="text" placeholder="Linkedin">
+    <span id="photo" >Photo
+        <input type= "file">
+    </span>
+
+<input id="description" type="text" placeholder="Description">
+</div>
+</div>
+
+<button id="submit" (click)="goToprofile()">Submit</button>
+
+
+</div>
+</div>
+
+
+

@@ -15,15 +15,46 @@ goToaddprofile() {
     this.router.navigate(['./home']);
   }
   
-  public users=[
+  public users:{name: string ; place : string ; image: string}[]=[
     {
-      // image: "/assets/img/person.png",
+      image: "/assets/img/arun.png",
       name: 'Harish',
       place: 'Chennai',
     },
     {
+      image: "/assets/img/arun 1.png",
       name: "Arun",
       place : 'Chennai',
+    },
+    {
+      image: "/assets/img/arun.png",
+      name: 'Madhan',
+      place: 'Chennai',
+    },
+    {
+      image: "/assets/img/arun 1.png",
+      name: 'Abin',
+      place: 'Chennai',
+    },
+    {
+      image: "/assets/img/arun.png",
+      name: 'Tazeen',
+      place: 'Chennai',
+    },
+    {
+      image: "/assets/img/arun.png",
+      name: 'Sivaram',
+      place: 'Chennai',
+    },
+    {
+      image: "/assets/img/arun 1.png",
+      name: 'Akash',
+      place: 'Chennai',
+    },
+    {
+      image: "/assets/img/arun.png",
+      name: 'Kumaran',
+      place: 'Chennai',
     },
   
   ];
