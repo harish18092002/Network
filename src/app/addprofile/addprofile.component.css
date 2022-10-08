@@ -10,6 +10,7 @@
     padding-left: 30px;
     width: 200px;
     cursor: pointer;
+    padding-bottom: 10px;
   }
   #profile{
     /* for design */
@@ -34,6 +35,9 @@
     height: auto;
     gap: 10px;
   }
+  #profile:hover{
+    background-color: rgb(219, 209, 209);
+  }
 
   #add{
     /* for design */
@@ -53,6 +57,9 @@
     border-radius: 7px;
     background-color: white;
     padding: 5px 10px 5px 10px;
+  }
+  #add:hover{
+    background-color: rgb(219, 209, 209);
   }
   .centerflex{
     /* box-sizing: border-box; */
@@ -177,4 +184,10 @@ width: 300px;
            margin-right: 500px;
            padding: 8px 30px 8px 30px;
            font-weight: bold;
+ }
+ #submit:hover{
+  background-color: rgb(219, 209, 209);
+ }
+ header{
+  border-bottom: 4px solid white;
  }

@@ -6,6 +6,7 @@
       background-size: cover;
   }
   .img{
+    padding-bottom: 10px;
     padding-top: 16px;
     padding-left: 30px;
     width: 200px;
@@ -32,6 +33,9 @@
     background-color: white;
     padding: 5px 10px 5px 10px;
   }
+  #add:hover{
+    background-color: rgb(219, 209, 209);
+  }
   #profile{
     /* for design */
       border: 1px solid #000000;
@@ -55,6 +59,9 @@
     height: auto;
     gap: 10px;
   }
+  #profile:hover{
+    background-color: rgb(219, 209, 209);
+  }
 
   
 body{
@@ -76,9 +83,7 @@ body{
     
 }
 .ip{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  
 
   border: 1px solid #000000;
       border-radius: 5px;
@@ -103,7 +108,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .personcard {
- 
+ cursor: pointer;
   height: 200px;
   width: 150px;
   border: 2px solid black;
@@ -113,8 +118,45 @@ margin-left:130px;
   padding: 14px;
   text-align: center;
   background-color: #f1f1f1;
+  box-shadow: 10px 8px  10px black;
+}
+.personcard:hover{
+box-shadow: 6px 6px 10px rgb(255, 255, 255);
+transform: scale(1.4); 
 }
 .contenttext{
   padding-top: 7px;
   font-size: small;
 }
+.header{
+
+  border-bottom: 4px solid white;
+}
+ #profilebox{
+  position: absolute;
+  padding-top: 15px;
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: white;
+  height: 110px;
+  width: 230px;
+  margin-left: 1300px;
+  top: 60px ;
+  z-index: 3;
+
+ }
+ .logout{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 90px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 70px;
+
+ }
+ .logout:hover{
+  background-color: rgb(219, 209, 209);
+ }

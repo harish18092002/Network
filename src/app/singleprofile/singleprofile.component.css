@@ -1,0 +1,181 @@
+.container{
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../assets/img/bg.png');
+    background-position: center;
+    background-size: cover;
+}
+.img{
+  padding-bottom: 10px;
+  padding-top: 16px;
+  padding-left: 30px;
+  width: 200px;
+  cursor: pointer;
+}
+#add{
+  /* for design */
+    border: 1px solid #000000;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 100px;
+    /* padding: 10px 30px 10px 40px; */
+
+    /* for allignment */
+    top: 0px;
+    border: 1px solid #000000;
+  position: absolute;
+
+
+left: 190px;
+/* right: 60px; */
+  border-radius: 7px;
+  background-color: white;
+  padding: 5px 10px 5px 10px;
+}
+#profile{
+  /* for design */
+    border: 1px solid #000000;
+    border-radius: 10px;
+    background-color: white;
+    margin-top:20px;
+    margin-left: 100px;
+    padding: 10px 40px 10px 40px;
+
+    /* for allignment */
+    border: 1px solid #000000;
+    position: absolute;
+    top: 0px;
+    right: 60px;
+  border-radius: 7px;
+  background-color: white;
+  padding: 5px 10px 5px 20px;
+  max-width: 100%;
+  display: flex;
+  height: auto;
+  gap: 10px;
+}
+.header{
+    border-bottom: 4px solid white;
+}
+
+.centerflex{
+    position: absolute;
+    width: 1270px;
+    height: 630px;
+    left: 150px;
+    top: 130px;
+
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid #000000;
+    border-radius: 24px; 
+ 
+    
+}
+.back{
+ padding-top: 30px;
+ padding-left: 30px;   
+
+}
+.backimg{
+  padding-top: 3px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lefty{
+  display: flex;
+    padding: 5px;
+    background-color: #000000;
+  gap: 6px;
+  
+color: white;
+border: 2px solid white;
+border-radius: 5px;
+
+cursor: pointer;
+
+}
+.top{
+    display: flex;
+
+}
+.persondetails{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    border: 1px solid #000000;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.6);
+        margin-top: 35px;
+        margin-left: 430px;
+        padding: 10px 70px 10px 70px;
+        font-weight: bold;
+  
+}
+ .blackflex{
+  margin-top: 30px;
+  margin-left: 190px;
+  width: 900px;
+height: 470px;
+ background: rgba(47, 69, 80, 0.7);
+ border: 1px solid black;
+ border-radius: 30px;
+ display: flex;
+ }
+ #profilebox{
+  position: absolute;
+  padding-top: 15px;
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: white;
+  height: 110px;
+  width: 230px;
+  margin-left: 1300px;
+  top: 60px ;
+  z-index: 3;
+
+ }
+ .logout{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 90px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 70px;
+
+ }
+img.roundborder{
+  border-radius: 30px 0px 0px 30px;
+}
+.imgleft{
+  display: flex;
+border-radius: 400px;
+
+}
+ #userimg{
+ height: 468px;
+ width: 900px;
+ display: flex;
+ flex-direction: column;
+
+ }
+
+ .contentright{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  line-height: 43px;
+/* margin-left: 200px; */
+margin-top: 40px;
+color: white;
+font-weight:500;
+font-size: large;
+
+ }

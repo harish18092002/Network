@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AddprofileComponent } from './addprofile/addprofile.component';
+import { SingleprofileComponent } from './singleprofile/singleprofile.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { AddprofileComponent } from './addprofile/addprofile.component';
     SignupComponent,
     ProfileComponent,
     AddprofileComponent,
+    SingleprofileComponent,
    
   ],
   imports: [

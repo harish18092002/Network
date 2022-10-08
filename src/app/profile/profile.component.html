@@ -1,12 +1,23 @@
-
+<html *ngIf="profilepage">
+<head>
+</head>
 <body>
   <div class=" container">
-    <header >
-      
-    <img class="img" (click)="goTohome()" src="../../assets/img/logo.png" alt="">    
+    <header >  
+      <div class="header">
+            <img class="img" (click)="goTohome()" src="../../assets/img/logo.png" alt="">    
     <button  id="add" (click)="goToaddprofile()"><b>+ Add</b></button>
-<button id="profile"><b>Profile</b> 
+    <div>
+      <button id="profile" (click)="showelements=!showelements"><b>Profile</b> 
 <img src="../../assets/img/pdrop-down 4.png" alt=""></button>
+    </div>
+    <div id="profilebox" *ngIf="showelements">
+      <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<b>Harish</b>   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>harish18092002@gmail.com</b></p>
+      <button class="logout" (click)="goTohome()">Log Out</button>
+    </div>
+
+      </div>
+
    </header>
 
    <div class="centerflex">
@@ -24,7 +35,7 @@
 
 <div class="card">
   <div class="contentbox" *ngFor="let user of users">
-    <div class="personcard">
+    <div class="personcard"  (click)="selectSingleUser(user)">
       <div class="personimage">
 <img  src="{{user.image}}">
       </div>
@@ -42,5 +53,6 @@
 
 </div>
 
-
 </body>
+</html>
+<app-singleprofile *ngIf="singleprofilepage" [receiver] = 'currentUser'></app-singleprofile>

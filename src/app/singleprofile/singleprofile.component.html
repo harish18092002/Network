@@ -1,0 +1,42 @@
+<body>
+    <div class=" container">
+      <header >  
+        <div class="header">
+              <img class="img" src="../../assets/img/logo.png" (click)="goTohome()">    
+      <button (click)="goToaddprofile()" id="add"><b>+ Add</b></button>
+  <button id="profile" (click)="showelements = !showelements"><b>Profile</b> 
+  <img src="../../assets/img/pdrop-down 4.png" alt=""></button>
+  <div id="profilebox" *ngIf="showelements">
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<b>Harish</b>   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>harish18092002@gmail.com</b></p>
+    <button class="logout" (click)="goTohome()">Log Out</button>
+  </div>
+        </div>
+    </header>
+
+     
+   <div class="centerflex">
+<div class="top">
+  <div class="back">
+    <span class="lefty" (click)=" goToprofile()">
+      <img class="backimg" src="../../assets/img/left.png" alt=""> Back</span>
+  </div>
+  <div>
+    <span class="persondetails">Person Detail's</span>
+  </div>
+</div>
+
+<div class="blackflex">
+  <div class="imgleft">
+<img id="userimg" src="{{receiver.image}}" class="roundborder">
+ </div>
+
+
+  <div class="contentright">
+<h3>{{receiver.name}} <br> {{receiver.place}} <br>  {{receiver.category}} <br>  {{receiver.number}} <br>  {{receiver.instagram}} <br>  {{receiver.linkedin}} <br>  {{receiver.description}} <br>   </h3>
+ </div>
+
+</div>
+
+</div>
+</div>
+</body>
