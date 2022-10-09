@@ -78,7 +78,9 @@ margin-left: 100px;
 padding: 10px 40px 10px 40px;
 }
 #submit:hover{
-    background-color: rgb(219, 209, 209);
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition: 1s;
 }
 
 #signup{
@@ -92,7 +94,9 @@ background-color: white;
 padding: 5px 30px 5px 30px;
 }
 #signup:hover{
-    background-color: rgb(219, 209, 209);
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition: 1s;
 }
 .border{
         border-bottom-style: solid;
