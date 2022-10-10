@@ -8,7 +8,9 @@
 </header>
 <div class="centerflex"> 
 <span class="addpersonaldetails">Add Personal Details</span>
-<div class="grid">
+
+<form action="../addprofile/addprofile.component.ts" class="grid">
+    
 <div class="left">
 
     <input id="name" type="text" placeholder="Full Name">
@@ -36,7 +38,10 @@
 
 <input id="description" type="text" placeholder="Description">
 </div>
-</div>
+</form>
+
+
+
 
 <button id="submit" (click)="goToprofile()">Submit</button>
 
