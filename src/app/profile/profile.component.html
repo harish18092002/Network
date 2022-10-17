@@ -1,5 +1,8 @@
 <html *ngIf="profilepage">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class=" container">
@@ -12,7 +15,7 @@
 <img src="../../assets/img/pdrop-down 4.png" alt=""></button>
     </div>
     <div id="profilebox" *ngIf="showelements">
-      <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<b>Harish</b>   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>harish18092002@gmail.com</b></p>
+      <p class="pl-6">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<b>Harish</b>   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  harish18092002@gmail.com</p>
       <button class="logout" (click)="goTohome()">Log Out</button>
     </div>
 

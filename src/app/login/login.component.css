@@ -1,4 +1,9 @@
+*{
+    font-family: 'Dosis', sans-serif;
+
+}
 body{
+    
     background-position: center;
 background-size: cover;
     height: 100vh;
@@ -18,7 +23,7 @@ box-sizing: border-box;
 
        .img{
     padding-top: 10px;
-        width: 170px;
+        width: 200px;
         cursor: pointer;
        }
 .parent{
@@ -46,10 +51,11 @@ justify-content: center;
 border: 1px solid #000000;
 border-radius: 10px;
 background-color: white;
-padding: 10px 18px 10px 18px;
+padding: 10px 25px 10px 25px;
 border-style: solid;
 background-color: white;
-margin-left: 120px;
+margin-left: 110px;
+
 }
 
 #usname{
@@ -70,11 +76,12 @@ border-radius: 10px;
 }
 
 #submit{
+
 border: 1px solid #000000;
 border-radius: 10px;
 background-color: white;
 margin-top: 50px;
-margin-left: 100px;
+margin-left: 90px;
 padding: 10px 40px 10px 40px;
 }
 #submit:hover{
@@ -86,12 +93,12 @@ padding: 10px 40px 10px 40px;
 #signup{
 border: 1px solid #000000;
 position: absolute;
-
+font-size: large;
 top: 17px;
 right: 60px;
 border-radius: 7px;
 background-color: white;
-padding: 5px 30px 5px 30px;
+padding: 7px 40px 7px 40px;
 }
 #signup:hover{
     background-color: rgb(0, 0, 0);
