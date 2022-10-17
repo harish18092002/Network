@@ -12,9 +12,10 @@
   }
   .img{
     padding-bottom: 10px;
-    padding-top: 16px;
+    padding-top: 10px;
     padding-left: 30px;
-    width: 200px;
+    height: 70px;
+    width: 230px;
     cursor: pointer;
   }
   #add{

@@ -1,14 +1,8 @@
-<app-header></app-header>
 <style>
 *{
     font-family: 'Dosis', sans-serif;
 }
   .container{
-      height: 100vh;
-      width: 100%;
-      background-image: url('../../assets/img/bg.png');
-      background-position: center;
-      background-size: cover;
       padding-left: 5%;
       padding-right: 5%;
       box-sizing: border-box;
@@ -84,14 +78,35 @@
   color: white;
   transition: 1s;
   }
-
+  .img{
+  padding-top: 16px;
+    padding-left: 30px;
+    height: 75px;
+    width: 230px;
+    cursor: pointer;
+    padding-bottom: 10px;
+  
+}
+header{
+  border-bottom: 4px solid white;
+}
+.bg{
+  height: 100vh;
+    width: 100%;
+    background-image: url('../../assets/img/bg.png');
+    background-position: center;
+    background-size: cover;
+}
  
   </style>
   
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap" rel="stylesheet">
-  <body>
+  <body class="bg">
+    <header>
+      <img class="img" src="../../assets/img/logo.png"  alt="">
+    </header>
       <div class=" container">
           <div class="parent">
                  <div class="center">
