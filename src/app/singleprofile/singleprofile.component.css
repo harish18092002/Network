@@ -1,55 +1,54 @@
-*{
-  font-family: 'Dosis', sans-serif;
+* {
+  font-family: "Dosis", sans-serif;
 }
-.container{
-    height: 100vh;
-    width: 100%;
-    background-image: url('../../assets/img/bg.png');
-    background-position: center;
-    background-size: cover;
+.container {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../assets/img/bg.png");
+  background-position: center;
+  background-size: cover;
 }
-.img{
+.img {
   padding-bottom: 10px;
   padding-top: 16px;
   padding-left: 30px;
   width: 200px;
   cursor: pointer;
 }
-#add{
+#add {
   /* for design */
-    border: 1px solid #000000;
-    border-radius: 10px;
-    background-color: white;
-    margin-top: 20px;
-    margin-left: 100px;
-    /* padding: 10px 30px 10px 40px; */
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 20px;
+  margin-left: 100px;
+  /* padding: 10px 30px 10px 40px; */
 
-    /* for allignment */
-    top: 0px;
-    border: 1px solid #000000;
+  /* for allignment */
+  top: 0px;
+  border: 1px solid #000000;
   position: absolute;
 
-
-left: 190px;
-/* right: 60px; */
+  left: 190px;
+  /* right: 60px; */
   border-radius: 7px;
   background-color: white;
   padding: 5px 10px 5px 10px;
 }
-#profile{
+#profile {
   /* for design */
-    border: 1px solid #000000;
-    border-radius: 10px;
-    background-color: white;
-    margin-top:20px;
-    margin-left: 100px;
-    padding: 10px 40px 10px 40px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 20px;
+  margin-left: 100px;
+  padding: 10px 40px 10px 40px;
 
-    /* for allignment */
-    border: 1px solid #000000;
-    position: absolute;
-    top: 0px;
-    right: 60px;
+  /* for allignment */
+  border: 1px solid #000000;
+  position: absolute;
+  top: 0px;
+  right: 60px;
   border-radius: 7px;
   background-color: white;
   padding: 5px 10px 5px 20px;
@@ -58,29 +57,30 @@ left: 190px;
   height: auto;
   gap: 10px;
 }
-.header{
-    border-bottom: 4px solid white;
+
+#profile:hover {
+  transform: scale(1.1);
+}
+.header {
+  border-bottom: 4px solid white;
 }
 
-.centerflex{
-    position: absolute;
-    width: 1270px;
-    height: 630px;
-    left: 150px;
-    top: 130px;
+.centerflex {
+  position: absolute;
+  width: 1270px;
+  height: 630px;
+  left: 150px;
+  top: 130px;
 
-    background-color: rgba(255, 255, 255, 0.4);
-    border: 1px solid #000000;
-    border-radius: 24px; 
- 
-    
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid #000000;
+  border-radius: 24px;
 }
-.back{
- padding-top: 30px;
- padding-left: 30px;   
-
+.back {
+  padding-top: 30px;
+  padding-left: 30px;
 }
-.backimg{
+.backimg {
   padding-top: 3px;
   height: 30px;
   width: 30px;
@@ -88,48 +88,49 @@ left: 190px;
   align-items: center;
   justify-content: center;
 }
-.lefty{
+.lefty {
   display: flex;
-    padding: 5px;
-    background-color: #000000;
+  padding: 5px;
+  background-color: #2f4550;
+
   gap: 6px;
-  
-color: white;
-border: 2px solid white;
-border-radius: 5px;
 
-cursor: pointer;
+  color: white;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
 
+  cursor: pointer;
 }
-.top{
-    display: flex;
+.lefty:hover {
+  transform: scale(1.1);
+}
+.top {
+  display: flex;
+}
+.persondetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-top: 35px;
+  margin-left: 430px;
+  padding: 10px 70px 10px 70px;
+  font-weight: bold;
 }
-.persondetails{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    border: 1px solid #000000;
-        border-radius: 5px;
-        background-color: rgba(255, 255, 255, 0.6);
-        margin-top: 35px;
-        margin-left: 430px;
-        padding: 10px 70px 10px 70px;
-        font-weight: bold;
-  
-}
- .blackflex{
+.blackflex {
   margin-top: 30px;
   margin-left: 190px;
   width: 900px;
-height: 470px;
- background: rgba(47, 69, 80, 0.7);
- border: 1px solid black;
- border-radius: 30px;
- display: flex;
- }
- #profilebox{
+  height: 470px;
+  background: rgba(47, 69, 80, 0.7);
+  border: 1px solid black;
+
+  display: flex;
+}
+#profilebox {
   position: absolute;
   padding-top: 15px;
   border-radius: 8px;
@@ -138,11 +139,10 @@ height: 470px;
   height: 110px;
   width: 230px;
   margin-left: 1300px;
-  top: 60px ;
+  top: 60px;
   z-index: 3;
-
- }
- .logout{
+}
+.logout {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,33 +152,80 @@ height: 470px;
   border-radius: 5px;
   margin-top: 10px;
   margin-left: 70px;
-
- }
-img.roundborder{
+}
+img.roundborder {
   border-radius: 30px 0px 0px 30px;
 }
-.imgleft{
+.imgleft {
   display: flex;
-border-radius: 400px;
+  border-radius: 400px;
+}
+#userimg {
+  height: 468px;
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+.main{
+  margin-top: 10px;
+  display: flex;
+flex-direction: column;
+border: 2px solid rgba(255, 255, 255, 0.55) ;
+height: 446px;
+width: 482px;
+align-items: flex-start;
+margin-left: 405px;
+
 
 }
- #userimg{
- height: 468px;
- width: 900px;
- display: flex;
- flex-direction: column;
+.contentright {
+background: rgba(255, 255, 255, 0.55);
+height: 130px;
+width: 480px;
+color: #000000;
 
- }
-
- .contentright{
-  display: flex;
+}
+.text{
+  padding-top: 4px;
   text-align: center;
-  flex-direction: column;
-  line-height: 43px;
-/* margin-left: 200px; */
-margin-top: 40px;
-color: white;
-font-weight:500;
-font-size: large;
+  font-size: 33px;
+}
+.text2{
+    text-align: center;
+      font-size: 23px;
+}
+.downcontent{
+  padding-top: 10px ;
+  margin-left: 30px;
+  color: white;
+  margin-top: 10px;
+  word-spacing: 0px;
+}
+.pre1{
+  display: flex;
+}
+.pre2{
+  padding-top: 20px;
+  display: flex;
 
- }
+}
+.pre3{
+  display: flex;
+  padding-top: 20px ;
+font-size: large;
+}
+#desc{
+  padding-top: 20px;
+}
+.desc{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.pre4{
+  display: flex;
+  
+  padding-top: 20px;
+  white-space: inherit;
+  
+  
+}

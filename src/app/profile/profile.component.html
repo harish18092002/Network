@@ -1,30 +1,43 @@
-<html *ngIf="profilepage">
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class=" container">
-    <header >  
-      <div class="header">
-            <img class="img" (click)="goTohome()" src="../../assets/img/logo.png" alt="">    
-    <button  id="add" (click)="goToaddprofile()"><b>+ Add</b></button>
-    <div>
-      <button id="profile" (click)="showelements=!showelements"><b>Profile</b> 
-<img src="../../assets/img/pdrop-down 4.png" alt=""></button>
-    </div>
-    <div id="profilebox" *ngIf="showelements">
-      <p class="pl-6">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<b>Harish</b>   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  harish18092002@gmail.com</p>
-      <button class="logout" (click)="goTohome()">Log Out</button>
-    </div>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header">
+          <img
+            class="img"
+            (click)="goTohome()"
+            src="../../assets/img/logo.png"
+            alt=""
+          />
+          <button id="add" (click)="goToaddprofile()"><b>+ Add</b></button>
+          <div>
+            <button id="profile" (click)="showelements = !showelements">
+              <b>Profile</b>
+              <img class="h-6 w-6" src="../../assets/img/profile.png" alt="" />
+            </button>
+          </div>
+          <div id="profilebox" *ngIf="showelements">
+            <p class="pl-6">
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+              &nbsp; &nbsp;<b>Harish</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              harish18092002@gmail.com
+            </p>
+            <button class="logout" (click)="goTohome()">Log Out</button>
+          </div>
+        </div>
+      </header>
 
-      </div>
-
-   </header>
-
-   <div class="centerflex">
-    <select class="ip">
+      <div class="centerflex">
+        <!-- <select class="ip">
       <option>Intresting Peoples </option>
       <option>Business Peoples</option>
       <option>Idea Peoples </option>
@@ -32,30 +45,43 @@
       <option>Talented Peoples </option>
       <option>Startup Plan Peoples </option>
       <option>Create Your own tag + </option>
-    </select>
+    </select> -->
 
+        <div class="filterbtn" (click)="showfilter = !showfilter">
+          <img src="../../assets/img/filter.png" id="filterimg" />
+          <button class="pt-1">Tag Filter's</button>
+        </div>
 
+        <div class="filter" *ngIf="showfilter">
+          <label  for="bp">Business People's  &nbsp; <input type="checkbox" id="bp" /></label>
+          <br>
+          <label for="ip">Idea People's</label>
+          <input type="checkbox" id="ip" />
+          <label for="sp">Startup People's</label>
+          <input type="checkbox" id="sp" />
+          <label for="ip1">Intresting People's</label>
+          <input type="checkbox" id="ip1" />
+          <label for="sp1">Sport's People's</label>
+          <input type="checkbox" id="sp1" />
+        </div>
 
-<div class="card">
-  <div class="contentbox" *ngFor="let user of users">
-    <div class="personcard"  (click)="selectSingleUser(user)">
-      <div class="personimage">
-<img  src="{{user.image}}">
+        <div class="card">
+          <div class="contentbox" *ngFor="let user of users">
+            <div class="personcard" [routerLink]="['/profile', user.userid]">
+              <div>
+                <img src="{{user.image}}" />
+              </div>
+              <div class="content">
+                <h5 class="contenttext">
+                  <b>Name:</b>{{ user.name }}<br /><b>Place:</b>{{ user.place }}
+                </h5>
+                
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-<div class="content">
-  <h5 class="contenttext"><b>Name:</b>{{user.name}}<br><b>Place:</b>{{user.place}}</h5>
-
-</div>
     </div>
-  </div>
-  
-  
-
-</div>
-   </div>
-
-</div>
-
-</body>
+  </body>
 </html>
-<app-singleprofile *ngIf="singleprofilepage" [receiver] = 'currentUser'></app-singleprofile>
+<!-- <app-singleprofile *ngIf="singleprofilepage" [receiver] = 'currentUser'></app-singleprofile> -->

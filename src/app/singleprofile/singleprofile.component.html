@@ -1,45 +1,65 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
 <body>
-    <div class=" container">
-      <header >  
-        <div class="header">
-              <img class="img" src="../../assets/img/logo.png" (click)="goTohome()">    
-      <button (click)="goToaddprofile()" id="add"><b>+ Add</b></button>
-  <button id="profile" (click)="showelements = !showelements"><b>Profile</b> 
-  <img src="../../assets/img/pdrop-down 4.png" alt=""></button>
-  <div id="profilebox" *ngIf="showelements">
-    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<b>Harish</b>   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>harish18092002@gmail.com</b></p>
-    <button class="logout" (click)="goTohome()">Log Out</button>
-  </div>
+  <div class="container">
+    <header>
+      <div class="header">
+        <img class="img" src="../../assets/img/logo.png" (click)="goTohome()" />
+        <button (click)="goToaddprofile()" id="add"><b>+ Add</b></button>
+        <button id="profile" (click)="showelements = !showelements">
+          <b>Profile</b>
+          <img class="h-6 w-6" src="../../assets/img/profile.png" alt="" />
+        </button>
+        <div id="profilebox" *ngIf="showelements">
+          <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+            &nbsp;<b>Harish</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; <b>harish18092002@gmail.com</b>
+          </p>
+          <button class="logout" (click)="goTohome()">Log Out</button>
         </div>
+      </div>
     </header>
 
-     
-   <div class="centerflex">
-<div class="top">
-  <div class="back">
-    <span class="lefty" (click)=" goToprofile()">
-      <img class="backimg" src="../../assets/img/left.png" alt=""> Back</span>
+    <div class="centerflex">
+      <div class="top">
+        <div class="back">
+          <span class="lefty" (click)="goToprofile()">
+            <img class="backimg" src="../../assets/img/back.png" alt="" />
+            Back</span
+          >
+        </div>
+        <div>
+          <span class="persondetails">Person Detail's</span>
+        </div>
+      </div>
+
+      <div class="blackflex">
+        <div class="imgleft">
+          <!-- <img id="userimg"class="roundborder"> src="{{getid.image}}"  -->
+       </div>
+<div class="main">
+
+
+        <div class="contentright">
+<p class="text">{{getid.name}} </p>
+
+<p class="text2"> {{getid.category}}</p>
+        </div>
+
+        <div class="downcontent">
+
+          <pre class="pre1"><img src="../../assets/img/location.png" > &nbsp; &nbsp;{{getid.place}} &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <img src="../../assets/img/number.png"> &nbsp; &nbsp; {{getid.number}}</pre>
+          <pre class="pre2"><img src="../../assets/img/insta.png" > &nbsp; &nbsp;{{getid.instagram}} &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <img src="../../assets/img/fb.png"> &nbsp; {{getid.facebook}}</pre>
+<pre class="pre3"><img src="../../assets/img/linkedin.png">&nbsp; &nbsp;{{getid.linkedin}}</pre>
+<div class="desc"><img id="desc" src="../../assets/img/desc.png">
+<pre class="pre4">{{getid.description}}</pre></div>
+
+
+        </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div>
-    <span class="persondetails">Person Detail's</span>
-  </div>
-</div>
-
-<div class="blackflex">
-  <div class="imgleft">
-<img id="userimg" src="{{receiver.image}}" class="roundborder">
- </div>
-
-
-  <div class="contentright">
-<h3>{{receiver.name}} <br> {{receiver.place}} <br>  {{receiver.category}} <br>  {{receiver.number}} <br>  {{receiver.instagram}} <br>  {{receiver.linkedin}} <br>  {{receiver.description}} <br>   </h3>
- </div>
-
-</div>
-
-</div>
-</div>
 </body>

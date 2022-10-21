@@ -17,6 +17,7 @@ const routes: Routes = [
       {path: 'login',component: LoginComponent},
       {path: 'signup',component: SignupComponent},
       {path: 'profile', component: ProfileComponent},
+      {path: 'profile/:id',component: SingleprofileComponent},
       {path: 'addprofile',component: AddprofileComponent},
       {path : 'singleprofile', component: SingleprofileComponent},
       {path: '**', redirectTo: 'home'},
