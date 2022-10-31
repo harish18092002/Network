@@ -35,6 +35,9 @@
   background-color: white;
   padding: 5px 10px 5px 10px;
 }
+#add:hover{
+  transform: scale(1.1);
+}
 #profile {
   /* for design */
   border: 1px solid #000000;
@@ -122,8 +125,8 @@
 }
 .blackflex {
   margin-top: 30px;
-  margin-left: 190px;
-  width: 900px;
+  margin-left: 100px;
+  width: 850px;
   height: 470px;
   background: rgba(47, 69, 80, 0.7);
   border: 1px solid black;
@@ -136,7 +139,7 @@
   border-radius: 8px;
   border: 2px solid white;
   background-color: white;
-  height: 110px;
+  height: 130px;
   width: 230px;
   margin-left: 1300px;
   top: 60px;
@@ -174,7 +177,7 @@ border: 2px solid rgba(255, 255, 255, 0.55) ;
 height: 446px;
 width: 482px;
 align-items: flex-start;
-margin-left: 405px;
+
 
 
 }
@@ -195,37 +198,45 @@ color: #000000;
       font-size: 23px;
 }
 .downcontent{
-  padding-top: 10px ;
+  padding-top: 15px ;
   margin-left: 30px;
   color: white;
   margin-top: 10px;
   word-spacing: 0px;
+  font-size: larger;
 }
 .pre1{
   display: flex;
 }
 .pre2{
-  padding-top: 20px;
+  padding-top: 25px;
   display: flex;
 
 }
 .pre3{
   display: flex;
-  padding-top: 20px ;
-font-size: large;
+  padding-top: 25px ;
+
 }
-#desc{
-  padding-top: 20px;
+#descimg{
+  padding-top: 25px;
 }
 .desc{
-  display: flex;
-  flex-wrap: nowrap;
+  display:flex;
+  align-items: flex-start;
+  gap: 10px;
 }
 .pre4{
   display: flex;
   
-  padding-top: 20px;
+  padding-top: 25px;
   white-space: inherit;
   
   
+}
+
+#userimg{ 
+  padding: 10px;
+  height: 465px;
+  width: 350px;
 }

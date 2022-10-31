@@ -10,6 +10,9 @@ import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AddprofileComponent } from './addprofile/addprofile.component';
 import { SingleprofileComponent } from './singleprofile/singleprofile.component';
+// import { ChipsComponent } from './chips/chips.component';
+// import {MatChipsModule} from '@angular/material/chips';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,12 +24,13 @@ import { SingleprofileComponent } from './singleprofile/singleprofile.component'
     SignupComponent,
     ProfileComponent,
     AddprofileComponent,
-    SingleprofileComponent,
+    SingleprofileComponent
    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

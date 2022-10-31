@@ -14,6 +14,8 @@ export class SingleprofileComponent implements OnInit {
   constructor(private router: Router ,private route: ActivatedRoute) { };
   id : any;
 getid:any;
+userdata :any;
+
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
@@ -22,9 +24,14 @@ getid:any;
       }});
   this.getid = this.users.find((user)=>user.userid === this.id)
 
+  // profile data 
+
+     this.userdata = localStorage.getItem('User');
+    this.userdata = JSON.parse(this.userdata)
+
     }
 
-      
+  
     
   // this.route.Params.subscribe(params => {
   //   console.log(params)}
@@ -125,7 +132,7 @@ userid  : "2",
   userid  : "6",
     image: "/assets/img/arun.png",
     name: 'Sivaram',
-    facebook: "SivaramSundaram",
+    facebook: "Sivaram20",
     place: 'Chennai',
     category : 'Intresting People',
     number: '9899709162',

@@ -1,6 +1,9 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap"
+  rel="stylesheet"
+/>
 <body>
   <div class="container">
     <header>
@@ -12,10 +15,8 @@
           <img class="h-6 w-6" src="../../assets/img/profile.png" alt="" />
         </button>
         <div id="profilebox" *ngIf="showelements">
-          <p>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
-            &nbsp;<b>Harish</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; <b>harish18092002@gmail.com</b>
+          <p class="flex pl-4">
+            Username: {{userdata.username}} <br> Mail: {{userdata.mail}}
           </p>
           <button class="logout" (click)="goTohome()">Log Out</button>
         </div>
@@ -34,31 +35,40 @@
           <span class="persondetails">Person Detail's</span>
         </div>
       </div>
+      <div class="flex items-start">
 
-      <div class="blackflex">
-        <div class="imgleft">
-          <!-- <img id="userimg"class="roundborder"> src="{{getid.image}}"  -->
-       </div>
-<div class="main">
+        <img src="../../assets/img/left.png" class="pt-48 pl-10 cursor-pointer transition ease-in-out hover:-translate-y-1" />
+     
 
+        <div class="blackflex">
+          <div class="imgleft">
+            <img id="userimg" src="{{ getid.image }}" />
+          </div>
+          <div class="main">
+            <div class="contentright">
+              <p class="text">{{ getid.name }}</p>
 
-        <div class="contentright">
-<p class="text">{{getid.name}} </p>
+              <p class="text2">{{ getid.category }}</p>
+            </div>
 
-<p class="text2"> {{getid.category}}</p>
+            <div class="downcontent">
+              <pre
+                class="pre1"
+              ><img src="../../assets/img/location.png" > &nbsp; &nbsp;{{getid.place}} &nbsp;   &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <img src="../../assets/img/number.png"> &nbsp; &nbsp; {{getid.number}}</pre>
+              <pre
+                class="pre2"
+              ><img src="../../assets/img/insta.png" > &nbsp; &nbsp;{{getid.instagram}} &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <img src="../../assets/img/fb.png"> &nbsp;&nbsp; {{getid.facebook}}</pre>
+              <pre
+                class="pre3"
+              ><img src="../../assets/img/linkedin.png">&nbsp; &nbsp;{{getid.linkedin}}</pre>
+              <div class="desc">
+                <img id="descimg" src="../../assets/img/desc.png" />
+                <p class="pre4">{{ getid.description }}</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="downcontent">
-
-          <pre class="pre1"><img src="../../assets/img/location.png" > &nbsp; &nbsp;{{getid.place}} &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <img src="../../assets/img/number.png"> &nbsp; &nbsp; {{getid.number}}</pre>
-          <pre class="pre2"><img src="../../assets/img/insta.png" > &nbsp; &nbsp;{{getid.instagram}} &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <img src="../../assets/img/fb.png"> &nbsp; {{getid.facebook}}</pre>
-<pre class="pre3"><img src="../../assets/img/linkedin.png">&nbsp; &nbsp;{{getid.linkedin}}</pre>
-<div class="desc"><img id="desc" src="../../assets/img/desc.png">
-<pre class="pre4">{{getid.description}}</pre></div>
-
-
-        </div>
-        </div>
+          <img src="../../assets/img/right.png" class="pt-48 pl-16 cursor-pointer transition ease-in-out hover:-translate-y-1"/>
       </div>
     </div>
   </div>

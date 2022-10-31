@@ -117,13 +117,17 @@ userid  : "2",
 
   },
 
-];
+]; 
 
- 
+  
 
   constructor(private router: Router) { }
+userdata :any;
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
+    this.userdata = localStorage.getItem('User');
+    this.userdata = JSON.parse(this.userdata)
+    
   }
 
   selectCurrentUser(data :any ){
@@ -141,4 +145,9 @@ showfilter :boolean = false;
 //   this.profilepage = false;
 //   this.singleprofilepage = true;
 //  }
+showprofile(){
+  
+
+ console.log (this.userdata)
+}
 }

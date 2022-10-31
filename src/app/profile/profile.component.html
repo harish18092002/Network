@@ -24,15 +24,13 @@
               <img class="h-6 w-6" src="../../assets/img/profile.png" alt="" />
             </button>
           </div>
-          <div id="profilebox" *ngIf="showelements">
-            <p class="pl-6">
-              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-              &nbsp; &nbsp;<b>Harish</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-              harish18092002@gmail.com
+          <div id="profilebox" *ngIf="showelements"  >
+            <p class="flex  pl-4">
+             Username: {{userdata.username}} <br>
+            Mail: {{userdata.mail}}
             </p>
             <button class="logout" (click)="goTohome()">Log Out</button>
-          </div>
+          </div> 
         </div>
       </header>
 
@@ -52,20 +50,26 @@
           <button class="pt-1">Tag Filter's</button>
         </div>
 
-        <div class="filter" *ngIf="showfilter">
-          <label  for="bp">Business People's  &nbsp; <input type="checkbox" id="bp" /></label>
-          <br>
-          <label for="ip">Idea People's</label>
-          <input type="checkbox" id="ip" />
-          <label for="sp">Startup People's</label>
-          <input type="checkbox" id="sp" />
-          <label for="ip1">Intresting People's</label>
-          <input type="checkbox" id="ip1" />
-          <label for="sp1">Sport's People's</label>
-          <input type="checkbox" id="sp1" />
+        <div class="filter" *ngIf="showfilter" >
+          <label  for="bp" class="text-lg pl-10">
+            <input type="checkbox" id="bp" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Business People's</label>
+          <label for="ip" class="text-lg pl-10">
+          <input type="checkbox" id="ip" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Idea People's</label>
+          <label for="sp" class="text-lg pl-10">
+          <input type="checkbox" id="sp" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Startup People's </label>
+          <label for="ip1" class="text-lg pl-10"> 
+          <input type="checkbox" id="ip1" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Intresting People's</label>
+          <label for="sp1" class="text-lg pl-10">
+          <input type="checkbox" id="sp1" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sport's People's</label>
+<div>
+<button class="profileapply">Apply</button>
+<button class="profilecancel">Cancel</button>
+
+</div>
+        
         </div>
 
-        <div class="card">
+        <div class="card" >
           <div class="contentbox" *ngFor="let user of users">
             <div class="personcard" [routerLink]="['/profile', user.userid]">
               <div>

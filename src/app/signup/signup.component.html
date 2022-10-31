@@ -7,7 +7,7 @@
       padding-right: 5%;
       box-sizing: border-box;
      
-  }
+  } 
   .parent{
       box-sizing: border-box;
       position: absolute;
@@ -112,13 +112,19 @@ header{
                  <div class="center">
         <span class="login"><b>Signup</b></span>
         <br>
-        <input type="email" id="mail" placeholder="Email Id"><br>
-        <input type="text" id="usname" placeholder="Username"><br>
-        <input type="password" id="pw" placeholder="Password"><br>
-        <button  id="signup" (click)="goToprofile()" id="submit"><b>Submit</b></button><br>
+
+        <form [formGroup] ="signupform" (ngSubmit)="onSubmit()" >
+
+        <input type="email" id="mail" placeholder="Email Id" formControlName="mail"><br>
+        <input type="text" id="usname" placeholder="Username" formControlName="username"><br>
+        <input type="password" id="pw" placeholder="Password" formControlName="pw"><br>
+        <button  id="submit"><b>Submit</b></button><br>
+
+        </form>
+<!-- (click)="goToprofile()" -->
           </div>
       </div>
-           
+      
   
       </div>
     

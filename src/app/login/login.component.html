@@ -10,7 +10,6 @@
       class="img"
       (click)="goTohome()"
       src="../../assets/img/logo.png"
-      alt=""
     />
     <button id="signup" (click)="goTosignup()">Signup</button>
   </div>
@@ -19,10 +18,15 @@
     <div class="center">
       <span class="login">Login</span>
       <br />
+<form [formGroup] ="loginform" (ngSubmit)="onSubmit()">
 
-      <input type="text" id="usname" placeholder="Username" /><br />
-      <input type="password" id="pw" placeholder="Password" /><br />
-      <button (click)="goToprofile()" id="submit">Submit</button><br />
+   <input type="text" id="usname" placeholder="Username" formControlName="usname"/><br />
+      <input type="password" id="pw" placeholder="Password" formControlName="pw" /><br />
+      <button  id="submit">Submit</button><br/>
+</form>
+     
     </div>
   </div>
 </body>
+<!-- onclick="usnamefunction()"  -->
+<!-- (click)="goToprofile()" -->
