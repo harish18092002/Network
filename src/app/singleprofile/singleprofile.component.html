@@ -7,7 +7,7 @@
 <body>
   <div class="container">
     <header>
-      <div class="header">
+      <div class="header"> 
         <img class="img" src="../../assets/img/logo.png" (click)="goTohome()" />
         <button (click)="goToaddprofile()" id="add"><b>+ Add</b></button>
         <button id="profile" (click)="showelements = !showelements">
@@ -36,8 +36,10 @@
         </div>
       </div>
       <div class="flex items-start">
-
-        <img src="../../assets/img/left.png" class="pt-48 pl-10 cursor-pointer transition ease-in-out hover:-translate-y-1" />
+<div class="previousprofile">
+    <img src="../../assets/img/left.png" (click)="previousprofile()" class="pt-48 pl-10 cursor-pointer transition ease-in-out hover:-translate-y-1" />
+</div> 
+       
      
 
         <div class="blackflex">
@@ -66,9 +68,12 @@
                 <p class="pre4">{{ getid.description }}</p>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
+        <div class="nextprofile">
           <img src="../../assets/img/right.png" class="pt-48 pl-16 cursor-pointer transition ease-in-out hover:-translate-y-1"/>
+        </div>
+          
       </div>
     </div>
   </div>

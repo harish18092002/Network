@@ -9,7 +9,7 @@
     background-position: center;
     background-size: cover;
 }
-.img{
+.img{ 
     padding-top: 16px;
     padding-left: 30px;
     width: 200px;
@@ -201,3 +201,9 @@ width: 300px;
  header{
   border-bottom: 4px solid white;
  }
+
+
+
+ /* .example-chip-list {
+   width: 100%;
+ }  */

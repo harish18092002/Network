@@ -1,33 +1,45 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { __values } from 'tslib';
 
-@Component({
+@Component({ 
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-   
-   signupform!: FormGroup; 
-  constructor(private router: Router) {}
+  
+  signupform = new FormGroup({
+      'mail' : new FormControl(null,[Validators.required,Validators.email]),
+      'username' : new FormControl(null,Validators.required),
+           'pw' : new FormControl(null,[Validators.required ,Validators.pattern('^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=\\D*\\d)[A-Za-z\\d!$%@#£€*?&]{8,}$')]),
+              })
+  ngOnInit() {  
+  }
 
-  ngOnInit(): void { 
-    this.signupform = new FormGroup({
-      'mail' : new FormControl(),
-      'username' : new FormControl(null),
-           'pw' : new FormControl(null),
-    });
-}
+constructor(private router: Router) {}
   goToprofile() {
     this.router.navigate(['./profile']);
   }
  onSubmit(){
  localStorage.setItem('User', JSON.stringify(this.signupform.value));
-this.signupform.reset();
+this.signupform.reset(); 
 this.goToprofile();
 
  }
+
+ get vmail(){
+return this.signupform.get("mail")
+ }
+ get vname(){
+return this.signupform.get("username")
+ }
+  get vpw(){
+return this.signupform.get("pw")
+ }
+ goTohome(){
+  this.router.navigate(['./home']);
+ }
+
 
 }

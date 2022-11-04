@@ -112,11 +112,11 @@ flex-wrap: wrap;
 }
 
 
-
+ 
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-.personcard {
+.personcard { 
  cursor: pointer;
   height: 200px;
   width: 150px;
@@ -192,6 +192,7 @@ display: flex;
   width: 27px;
  }
  .filter{
+  position: absolute;
   padding-top: 10px;
   display: grid;
   background: white;

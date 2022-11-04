@@ -13,6 +13,12 @@ import { SingleprofileComponent } from './singleprofile/singleprofile.component'
 // import { ChipsComponent } from './chips/chips.component';
 // import {MatChipsModule} from '@angular/material/chips';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatIconModule} from '@angular/material/icon';
+import { TagchipsComponent } from './tagchips/tagchips.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 
 @NgModule({
@@ -24,13 +30,18 @@ import { ReactiveFormsModule } from '@angular/forms';
     SignupComponent,
     ProfileComponent,
     AddprofileComponent,
-    SingleprofileComponent
+    SingleprofileComponent,
+    TagchipsComponent
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatChipsModule,
+    MatIconModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

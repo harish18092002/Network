@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { SingleprofileComponent } from './singleprofile/singleprofile.component';
+import { TagchipsComponent } from './tagchips/tagchips.component';
+
 
 const routes: Routes = [
   {
@@ -20,6 +22,7 @@ const routes: Routes = [
       {path: 'profile/:id',component: SingleprofileComponent},
       {path: 'addprofile',component: AddprofileComponent},
       {path : 'singleprofile', component: SingleprofileComponent},
+      {path : 'tagchips' , component: TagchipsComponent},
       {path: '**', redirectTo: 'home'},
     ],
   },

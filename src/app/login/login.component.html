@@ -6,7 +6,7 @@
 />
 <body>
   <div class="header">
-    <img
+    <img 
       class="img"
       (click)="goTohome()"
       src="../../assets/img/logo.png"
@@ -19,10 +19,16 @@
       <span class="login">Login</span>
       <br />
 <form [formGroup] ="loginform" (ngSubmit)="onSubmit()">
+<div class="formgroup">
 
-   <input type="text" id="usname" placeholder="Username" formControlName="usname"/><br />
-      <input type="password" id="pw" placeholder="Password" formControlName="pw" /><br />
-      <button  id="submit">Submit</button><br/>
+  <input type="text" id="usname" placeholder="Username" formControlName="usname"/>
+        <small class="text-red-600 pt-1" *ngIf="vname && vname.invalid && vname.touched">Username is Required</small>
+      <input type="password" id="pw" placeholder="Password" formControlName="pw" />
+                      <small class="text-red-600 pt-1" *ngIf="vpw && vpw.invalid && vpw.touched">Use 8 or more characters with a mix of
+                        letters, numbers & symbols</small>
+      <button [disabled]="loginform.invalid" id="submit">Submit</button>
+</div>
+   
 </form>
      
     </div>

@@ -1,6 +1,6 @@
 import { STRING_TYPE } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,17 +10,18 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
  
-loginform! : FormGroup ;
+
  signupdata :any;
  logindata :any ;
 
+loginform = new FormGroup({ 
+      'usname' : new FormControl(null,Validators.required),
+           'pw' : new FormControl(null,[Validators.required ,Validators.pattern('^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=\\D*\\d)[A-Za-z\\d!$%@#£€*?&]{8,}$')]),
+    });
   constructor(private router: Router) { }
 
   ngOnInit(): void {
- this.loginform = new FormGroup({
-      'usname' : new FormControl(null),
-           'pw' : new FormControl(null),
-    });
+ 
 
   }
   goTosignup() {
@@ -55,13 +56,17 @@ onSubmit(){
   else{
     alert("Check Your Credentials")
   }
-
-
-    
 }
 
 
+   // for forms validators
 
+   get vname(){
+return this.loginform.get("usname")
+ }
+  get vpw(){
+return this.loginform.get("pw")
+ }
 
 }
 

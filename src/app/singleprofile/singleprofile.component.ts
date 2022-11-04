@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router, UrlSerializer } from '@angular/router';
+import { Router } from '@angular/router';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 
 
@@ -12,9 +12,10 @@ export class SingleprofileComponent implements OnInit {
   // @Input ()receiver : any ;
 
   constructor(private router: Router ,private route: ActivatedRoute) { };
-  id : any;
-getid:any;
-userdata :any;
+
+  id : any;  // this is param data
+getid:any;   //this is the particular profile data after filtering with param
+userdata :any;  // this is profile username mail data
 
 
   ngOnInit(): void {
@@ -22,6 +23,7 @@ userdata :any;
       if(params.get('id') !== null){
           this.id =  params.get('id');
       }});
+
   this.getid = this.users.find((user)=>user.userid === this.id)
 
   // profile data 
@@ -30,25 +32,26 @@ userdata :any;
     this.userdata = JSON.parse(this.userdata)
 
     }
-
-  
-    
-  // this.route.Params.subscribe(params => {
-  //   console.log(params)}
-  //     }
  
-//     // });
-//   });
-// }
-  // async currentItem(id:any){
-  //   await db.todos
-  //   .where('id')
-  //   .equals(id)
-  //   .toArray()
-  //   .then((data)=>{
-  //     this.item =data[0];
-  //   });
-  // }
+    idvalue:any;
+  pid:any;
+previousprofile(){
+//  this.idvalue=this.id;
+//   for(this.idvalue;this.idvalue=0;this.idvalue--){
+//      console.log("this is id value" + this.idvalue)
+//     console.log("this is id " + this.id)
+//     this.getid = this.users.find((user)=>user.userid === this.idvalue)
+// this.idvalue--;
+//   }
+
+if(this.getid.userid ===this.id){
+
+  this.id = this.id -1 ;
+  
+    this.getid = this.users.find((user)=>user.userid === this.id)
+    console.log(this.getid.name)
+}
+}
   
   
 goTohome(){

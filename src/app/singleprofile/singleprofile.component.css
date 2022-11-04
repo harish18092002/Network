@@ -1,6 +1,6 @@
 * {
   font-family: "Dosis", sans-serif;
-}
+} 
 .container {
   height: 100vh;
   width: 100%;
@@ -10,7 +10,7 @@
 }
 .img {
   padding-bottom: 10px;
-  padding-top: 16px;
+  padding-top: 16px; 
   padding-left: 30px;
   width: 200px;
   cursor: pointer;
@@ -34,7 +34,7 @@
   border-radius: 7px;
   background-color: white;
   padding: 5px 10px 5px 10px;
-}
+} 
 #add:hover{
   transform: scale(1.1);
 }
