@@ -7,9 +7,7 @@ import {MatChipInputEvent} from '@angular/material/chips';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 
-export interface Fruit {
-  name: string;
-}
+
 
 @Component({
   selector: 'app-tagchips',
@@ -18,23 +16,36 @@ export interface Fruit {
 })
 
 export class TagchipsComponent implements OnInit {
-  addOnBlur = true;
-  readonly separatorKeysCodes = [ENTER, COMMA] as const;
-  fruits: Fruit[] = [{name: 'Lemon'}, {name: 'Lime'}, {name: 'Apple'}];
+  separatorKeysCodes: number[] = [ENTER, COMMA];
+  fruitCtrl = new FormControl('');
+  filteredFruits: Observable<string[]>;
+  fruits: string[] = ['Lemon'];
+  allFruits: string[] = ['Business Peoples','Idea peoples','Entertainment Peoples','Talentes Peoples','Startup plan Peoples'];
+
+  @ViewChild('fruitInput') fruitInput!: ElementRef<HTMLInputElement>;
+
+  constructor() {
+    this.filteredFruits = this.fruitCtrl.valueChanges.pipe(
+      startWith(null),
+      map((fruit: string | null) => (fruit ? this._filter(fruit) : this.allFruits.slice())),
+    );
+  }
 
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
 
     // Add our fruit
     if (value) {
-      this.fruits.push({name: value});
+      this.fruits.push(value);
     }
 
     // Clear the input value
     event.chipInput!.clear();
+
+    this.fruitCtrl.setValue(null);
   }
 
-  remove(fruit: Fruit): void {
+  remove(fruit: string): void {
     const index = this.fruits.indexOf(fruit);
 
     if (index >= 0) {
@@ -42,6 +53,17 @@ export class TagchipsComponent implements OnInit {
     }
   }
 
+  selected(event: MatAutocompleteSelectedEvent): void {
+    this.fruits.push(event.option.viewValue);
+    this.fruitInput.nativeElement.value = '';
+    this.fruitCtrl.setValue(null);
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.allFruits.filter(fruit => fruit.toLowerCase().includes(filterValue));
+  }
   ngOnInit(): void {
   } 
 

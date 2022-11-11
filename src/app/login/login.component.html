@@ -19,7 +19,7 @@
       <span class="login">Login</span>
       <br />
 <form [formGroup] ="loginform" (ngSubmit)="onSubmit()">
-<div class="formgroup">
+<div class="formgroup"> 
 
   <input type="text" id="usname" placeholder="Username" formControlName="usname"/>
         <small class="text-red-600 pt-1" *ngIf="vname && vname.invalid && vname.touched">Username is Required</small>

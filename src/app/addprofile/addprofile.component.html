@@ -10,7 +10,7 @@
     <img src="../../assets/img/pdrop-down 4.png" alt=""></button>
 </header>
 <div class="centerflex"> 
-<span class="addpersonaldetails">Add Personal Details</span>
+<span class="addpersonaldetails">Add Personal Details</span> 
 
 <form action="../addprofile/addprofile.component.ts" class="grid">
     
@@ -18,16 +18,29 @@
 
     <input id="name" type="text" placeholder="Full Name" #name>
 
-<select id="select"> 
+<div id="select"> 
+<mat-form-field class="example-chip-list" appearance="fill">
+  <mat-label>Tags</mat-label>
+  <mat-chip-list #chipList aria-label="Fruit selection">
+    <mat-chip *ngFor="let fruit of fruits" (removed)="remove(fruit)">
+      {{fruit}}
+      <button matChipRemove>
+        <mat-icon> <img src="../../assets/img/cancel.png" alt="">cancel</mat-icon>
+      </button>
+    </mat-chip>
+    <input placeholder="New Tag..." #fruitInput [formControl]="fruitCtrl" [matAutocomplete]="auto"
+      [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      (matChipInputTokenEnd)="add($event)">
+  </mat-chip-list>
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+    <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
+      {{fruit}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+</div>
   
-    <option>Select Your Tag</option>
-    <option>Business People's</option>
-    <option>Idea People's </option>
-    <option>Entertainment People's </option>
-    <option>Talented People's </option>
-    <option>Startup Plan People's </option>
-    <option>Create Your Own Tag +</option>
-</select>
+
 <input id="place" type="text" placeholder="Place">
 <input id="no" type="text" placeholder="Contact Number">
 <input id="insta" type="text" placeholder="Instagram">
