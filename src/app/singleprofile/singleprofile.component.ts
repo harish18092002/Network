@@ -1,8 +1,9 @@
+import { E } from '@angular/cdk/keycodes';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 
-
+ 
 @Component({
   selector: 'app-singleprofile',
   templateUrl: './singleprofile.component.html',
@@ -17,14 +18,8 @@ export class SingleprofileComponent implements OnInit {
 getid:any;   //this is the particular profile data after filtering with param
 userdata :any;  // this is profile username mail data
 
-
-  ngOnInit(): void {
-    this.route.paramMap.subscribe((params: ParamMap) => {
-      if(params.get('id') !== null){
-          this.id =  params.get('id');
-      }});
-
-  this.getid = this.users.find((user)=>user.userid === this.id)
+ngOnInit(): void {
+ this.oninit();
 
   // profile data 
 
@@ -32,26 +27,41 @@ userdata :any;  // this is profile username mail data
     this.userdata = JSON.parse(this.userdata)
 
     }
+
+
+    oninit(){
+         this.route.paramMap.subscribe((params: ParamMap) => {
+      if(params.get('id') !== null){
+          this.id =  params.get('id');
+
+       
+      }});
+
+  this.getid = this.users.find((user)=>user.userid === this.id)
+  // this.currentUser: boolean = false;
+    }
  
-    idvalue:any;
-  pid:any;
-previousprofile(){
-//  this.idvalue=this.id;
-//   for(this.idvalue;this.idvalue=0;this.idvalue--){
-//      console.log("this is id value" + this.idvalue)
-//     console.log("this is id " + this.id)
-//     this.getid = this.users.find((user)=>user.userid === this.idvalue)
-// this.idvalue--;
-//   }
+  //   idvalue:any;
+  // pid:any;
 
-if(this.getid.userid ===this.id){
+//   index :any;
+// previousprofile(){
+// //  this.idvalue=this.id;
+// //   for(this.idvalue;this.idvalue=0;this.idvalue--){
+// //      console.log("this is id value" + this.idvalue)
+// //     console.log("this is id " + this.id)
+// //     this.getid = this.users.find((user)=>user.userid === this.idvalue)
+// // this.idvalue--;
+// //   }
 
-  this.id = this.id -1 ;
-  
-    this.getid = this.users.find((user)=>user.userid === this.id)
-    console.log(this.getid.name)
-}
-}
+// const curruser = this.index;
+
+//  const i = this.users.findIndex(function (el) { 
+//   return el ==  curruser
+// })
+// console.log(i)
+// }
+
   
   
 goTohome(){
@@ -172,7 +182,94 @@ userid  : "2",
 ];
 
 
+currentuser : any;
+paramdataid:any;
 
+  //  next() {
+    
+  // this.paramdataid=this.getid.userid
+
+  // // let index = this.users.findIndex(function(ele){
+  // // ele === paramdataid;
+  // // return ele  ;
+  // // })
+  // // console.log("This is index "+index)
+
+  // for ( this.paramdataid; this.paramdataid = 8 ; this.paramdataid++){
+  //     this.paramdataid=this.getid.userid
+  //   this.currentuser =JSON.stringify(this.users[this.paramdataid]);
+  // // let curr = this. currentuser;
+  // console.log("This param data id is "+ this.paramdataid);  
+  // return this.paramdataid
+  // }
+  // console.log("This is current user "+this.currentuser)
+        
+//   //   }
+
+
+// currentUser =this.users[1];
+
+//     // setUser(user) {
+//     //     this.currentUser = user;
+//     // }
+
+//     prev() {
+//       // this.getid  =false;
+//         if (this.currentUser !== this.users[0]) {
+//             const currUser = this.getid;
+//             const i = this.users.findIndex(function (el) {
+//                 return el === currUser;
+//             });
+//             this.currentUser = this.users[i - 1];
+             
+//         }
+//       console.log(this.currentUser)
+//     }
+
+//     next() {
+//         if (this.currentUser !== this.users[this.users.length - 1]) {
+//             const currUser = this.currentUser;
+//             const i = this.users.findIndex(function (el) {
+//                 return el === currUser;
+//             });
+//             this.currentUser = this.users[i + 1];
+            
+//         }
+//        console.log(this.currentUser)
+//     }
+
+currentUser =this.users[1];
+
+
+    setUser(user) {
+        this.currentUser = user;
+    }
+
+    prev() {
+        if (this.currentUser !== this.users[0]) {
+            const currUser = this.currentUser;
+            const i = this.users.findIndex(function (el) {
+                return el === currUser;
+            });
+            this.currentUser = this.users[i - 1];
+             
+        }
+      console.log(this.currentUser)
+      this.currentUser = this.getid;
+      
+    }
+
+    next() {
+        if (this.currentUser !== this.users[this.users.length - 1]) {
+            const currUser = this.currentUser;
+            const i = this.users.findIndex(function (el) {
+                return el === currUser;
+            });
+            this.currentUser = this.users[i + 1];
+             
+        }
+       console.log(this.currentUser)
+    }
 
 
 }

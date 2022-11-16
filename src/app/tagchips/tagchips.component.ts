@@ -1,26 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
-import {ElementRef, ViewChild} from '@angular/core';
+import { ElementRef, ViewChild} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {MatAutocompleteSelectedEvent} from '@angular/material/autocomplete';
 import {MatChipInputEvent} from '@angular/material/chips';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 
-
-
+//  @title Chips Autocomplete
+ 
 @Component({
-  selector: 'app-tagchips',
-  templateUrl: './tagchips.component.html',
-  styleUrls: ['./tagchips.component.css']
+  selector: 'tagchips',
+  templateUrl: 'tagchips.component.html',
+  styleUrls: ['tagchips.component.css'],
 })
-
-export class TagchipsComponent implements OnInit {
+export class ChipsAutocompleteExample {
   separatorKeysCodes: number[] = [ENTER, COMMA];
   fruitCtrl = new FormControl('');
   filteredFruits: Observable<string[]>;
   fruits: string[] = ['Lemon'];
-  allFruits: string[] = ['Business Peoples','Idea peoples','Entertainment Peoples','Talentes Peoples','Startup plan Peoples'];
+  allFruits: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
 
   @ViewChild('fruitInput') fruitInput!: ElementRef<HTMLInputElement>;
 
@@ -64,7 +63,5 @@ export class TagchipsComponent implements OnInit {
 
     return this.allFruits.filter(fruit => fruit.toLowerCase().includes(filterValue));
   }
-  ngOnInit(): void {
-  } 
 
 }

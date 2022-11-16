@@ -16,7 +16,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatIconModule} from '@angular/material/icon';
-import { TagchipsComponent } from './tagchips/tagchips.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
@@ -32,8 +31,8 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     SignupComponent,
     ProfileComponent,
     AddprofileComponent,
-    SingleprofileComponent,
-    TagchipsComponent
+    SingleprofileComponent
+ 
    
   ],
   imports: [
@@ -45,7 +44,8 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     MatIconModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

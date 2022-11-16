@@ -1,147 +1,131 @@
-*{
-  font-family: 'Dosis', sans-serif;
-
+* {
+  font-family: "Dosis", sans-serif;
 }
 
- .container{
-      height: 100vh;
-      width: 100%;
-      background-image: url('../../assets/img/bg.png');
-      background-position: center;
-      background-size: cover;
-  }
-  .img{
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: 30px;
-    height: 70px;
-    width: 220px;
-    cursor: pointer;
-  }
-  #add{
-    /* for design */
-      border: 1px solid #000000;
-      border-radius: 10px;
-      background-color: white;
-      margin-top: 20px;
-      margin-left: 100px;
-      /* padding: 10px 30px 10px 40px; */
+.container {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../assets/img/bg.png");
+  background-position: center;
+  background-size: cover;
+}
+.img {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 30px;
+  height: 70px;
+  width: 220px;
+  cursor: pointer;
+}
+#add {
+  /* for design */
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 20px;
+  margin-left: 100px;
+  /* padding: 10px 30px 10px 40px; */
 
-      /* for allignment */
-      top: 0px;
-      border: 1px solid #000000;
-    position: absolute;
-  
-  
+  /* for allignment */
+  top: 0px;
+  border: 1px solid #000000;
+  position: absolute;
+
   left: 190px;
   /* right: 60px; */
-    border-radius: 7px;
-    background-color: white;
-    padding: 5px 10px 5px 10px;
-  }
-  #add:hover{
-    background-color: rgb(0, 0, 0);
-    color: white;
-    transition: 1s;
-  }
-  #profile{
-    /* for design */
-      border: 1px solid #000000;
-      border-radius: 10px;
-      background-color: white;
-      margin-top:20px;
-      margin-left: 100px;
-      padding: 10px 40px 10px 40px;
-
-      /* for allignment */
-      border: 1px solid #000000;
-    position: absolute;
-  top: 0px;
- 
-  right: 60px;
-    border-radius: 7px;
-    background-color: white;
-    padding: 5px 10px 5px 20px;
-    max-width: 100%;
-    display: flex;
-    height: auto;
-    gap: 10px;
-  }
-  #profile:hover{
-
-transform: scale(1.1);
-    
-  }
-
-  
-body{
-    background-color: rgba(241, 165, 51, 0.96);
-  }
-    
-
-.centerflex{
-    position: absolute;
-    width: 1270px;
-    height: 630px;
-    left: 150px;
-    top: 130px;
-
-    background-color: rgba(255, 255, 255, 0.4);
-    border: 1px solid #000000;
-    border-radius: 24px; 
- 
-    
+  border-radius: 7px;
+  background-color: white;
+  padding: 5px 10px 5px 10px;
 }
-.ip{
-  
-
+#add:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: 1s;
+}
+#profile {
+  /* for design */
   border: 1px solid #000000;
-      border-radius: 5px;
-      background-color: white;
-      margin-top: 20px;
-      margin-left: 550px;
-      padding: 10px 30px 10px 30px;
-      font-weight: bold;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 20px;
+  margin-left: 100px;
+  padding: 10px 40px 10px 40px;
+
+  /* for allignment */
+  border: 1px solid #000000;
+  position: absolute;
+  top: 0px;
+
+  right: 60px;
+  border-radius: 7px;
+  background-color: white;
+  padding: 5px 10px 5px 20px;
+  max-width: 100%;
+  display: flex;
+  height: auto;
+  gap: 10px;
+}
+#profile:hover {
+  transform: scale(1.1);
 }
 
-
-.card{
-display: flex;
-flex-wrap: wrap;
-
+body {
+  background-color: rgba(241, 165, 51, 0.96);
 }
 
+.centerflex {
+  position: absolute;
+  width: 1270px;
+  height: 630px;
+  left: 150px;
+  top: 130px;
 
- 
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid #000000;
+  border-radius: 24px;
+}
+.ip {
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 20px;
+  margin-left: 550px;
+  padding: 10px 30px 10px 30px;
+  font-weight: bold;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-.personcard { 
- cursor: pointer;
+.personcard {
+  cursor: pointer;
   height: 200px;
   width: 150px;
   border: 2px solid black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin-top: 67px;
-margin-left:130px;
+  margin-top: 60px;
+  margin-left: 130px;
   padding: 14px;
   text-align: center;
   background-color: #f1f1f1;
-  box-shadow: 10px 8px  10px black;
+  box-shadow: 10px 8px 10px black;
 }
-.personcard:hover{
-
-transform: scale(1.4); 
+.personcard:hover {
+  transform: scale(1.4);
 }
-.contenttext{
+.contenttext {
   padding-top: 7px;
   font-size: small;
 }
-.header{
-
+.header {
   border-bottom: 4px solid white;
 }
- #profilebox{
+#profilebox {
   position: absolute;
   padding-top: 15px;
   border-radius: 8px;
@@ -150,11 +134,10 @@ transform: scale(1.4);
   height: 130px;
   width: 230px;
   margin-left: 1300px;
-  top: 60px ;
+  top: 60px;
   z-index: 3;
-
- }
- .logout{
+}
+.logout {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,20 +147,18 @@ transform: scale(1.4);
   border-radius: 5px;
   margin-top: 10px;
   margin-left: 70px;
-
- }
- .logout:hover{
+}
+.logout:hover {
   background-color: rgb(0, 0, 0);
   color: white;
   transition: 1s;
- }
- .filterbtn{
- 
-display: flex;
+}
+.filterbtn {
+  display: flex;
   border: 1px solid #000000;
   border-radius: 10px;
   background-color: white;
-  margin-top:20px;
+  margin-top: 20px;
   margin-left: 550px;
   /* padding: 10px 40px 10px 10px; */
   padding: 5px 50px 10px 50px;
@@ -185,13 +166,13 @@ display: flex;
   height: 45px;
   gap: 6px;
   font-size: large;
- }
+}
 
- #filterimg{
+#filterimg {
   height: 30px;
   width: 27px;
- }
- .filter{
+}
+.filter {
   position: absolute;
   padding-top: 10px;
   display: grid;
@@ -202,35 +183,34 @@ display: flex;
   height: 200px;
   border-radius: 15px;
   z-index: 5;
-  
- }
- .profileapply{
+}
+.profileapply {
   height: 30px;
   width: 60px;
   border: 1px solid black;
-  background-color: #7C6F6F;
+  background-color: #7c6f6f;
   margin-left: 50px;
   margin-top: 8px;
   margin-bottom: 5px;
   color: white;
   border-radius: 5px;
- }
- .profileapply:hover{
+}
+.profileapply:hover {
   background-color: #000000;
   transform: scale(1.1);
- }
- .profilecancel {
-   height: 30px;
-   width: 60px;
-   border: 1px solid black;
-   background-color: #7C6F6F;
-   margin-left: 50px;
-   margin-top: 8px;
-   margin-bottom: 5px;
-   color: white;
-   border-radius: 5px;
- }
-    .profilecancel:hover {
-      background-color: #000000;
-      transform: scale(1.1);
-    }
+}
+.profilecancel {
+  height: 30px;
+  width: 60px;
+  border: 1px solid black;
+  background-color: #7c6f6f;
+  margin-left: 50px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  color: white;
+  border-radius: 5px;
+}
+.profilecancel:hover {
+  background-color: #000000;
+  transform: scale(1.1);
+}

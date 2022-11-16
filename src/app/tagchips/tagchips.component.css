@@ -1,9 +1,9 @@
- .example-chip-list {
-     width: 100%;
-     
- }
- ::placeholder{
-    color: gray;
-    font-family: dosis;
-    font-weight: 600;
- }
+.example-chip-list {
+  width: 100%;
+}
+
+::placeholder {
+  color: gray;
+  font-family: dosis;
+  font-weight: 600;
+}
