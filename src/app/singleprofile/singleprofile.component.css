@@ -1,6 +1,6 @@
 * {
   font-family: "Dosis", sans-serif;
-} 
+}
 .container {
   height: 100vh;
   width: 100%;
@@ -10,7 +10,7 @@
 }
 .img {
   padding-bottom: 10px;
-  padding-top: 16px; 
+  padding-top: 16px;
   padding-left: 30px;
   width: 200px;
   cursor: pointer;
@@ -34,8 +34,8 @@
   border-radius: 7px;
   background-color: white;
   padding: 5px 10px 5px 10px;
-} 
-#add:hover{
+}
+#add:hover {
   transform: scale(1.1);
 }
 #profile {
@@ -156,6 +156,11 @@
   margin-top: 10px;
   margin-left: 70px;
 }
+.logout:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: 1s;
+}
 img.roundborder {
   border-radius: 30px 0px 0px 30px;
 }
@@ -169,73 +174,65 @@ img.roundborder {
   display: flex;
   flex-direction: column;
 }
-.main{
+.main {
   margin-top: 10px;
   display: flex;
-flex-direction: column;
-border: 2px solid rgba(255, 255, 255, 0.55) ;
-height: 446px;
-width: 482px;
-align-items: flex-start;
-
-
-
+  flex-direction: column;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  height: 446px;
+  width: 482px;
+  align-items: flex-start;
 }
 .contentright {
-background: rgba(255, 255, 255, 0.55);
-height: 130px;
-width: 480px;
-color: #000000;
-
+  background: rgba(255, 255, 255, 0.55);
+  height: 130px;
+  width: 480px;
+  color: #000000;
 }
-.text{
+.text {
   padding-top: 4px;
   text-align: center;
   font-size: 33px;
 }
-.text2{
-    text-align: center;
-      font-size: 23px;
+.text2 {
+  text-align: center;
+  font-size: 23px;
 }
-.downcontent{
-  padding-top: 15px ;
+.downcontent {
+  padding-top: 15px;
   margin-left: 30px;
   color: white;
   margin-top: 10px;
   word-spacing: 0px;
   font-size: larger;
 }
-.pre1{
+.pre1 {
   display: flex;
 }
-.pre2{
+.pre2 {
   padding-top: 25px;
   display: flex;
-
 }
-.pre3{
+.pre3 {
   display: flex;
-  padding-top: 25px ;
-
-}
-#descimg{
   padding-top: 25px;
 }
-.desc{
-  display:flex;
+#descimg {
+  padding-top: 25px;
+}
+.desc {
+  display: flex;
   align-items: flex-start;
   gap: 10px;
 }
-.pre4{
+.pre4 {
   display: flex;
-  
+
   padding-top: 25px;
   white-space: inherit;
-  
-  
 }
 
-#userimg{ 
+#userimg {
   padding: 10px;
   height: 465px;
   width: 350px;

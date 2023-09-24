@@ -10,9 +10,11 @@ export class ProfileComponent implements OnInit {
 
 goToaddprofile() {
     this.router.navigate(['./addprofile']);
-  }
+  } 
   goTohome(){
     this.router.navigate(['./home']);
+      localStorage.removeItem('User');
+        sessionStorage.removeItem('User');
   }
   goTosingleprofile(){
     this.router.navigate(['./singleprofile']);

@@ -1,121 +1,118 @@
-
-  *{
-    font-family: 'Dosis', sans-serif;
-  }
-.container{
-    height: 100vh;
-    width: 100%;
-    background-image: url('../../assets/img/bg.png');
-    background-position: center;
-    background-size: cover;
+* {
+  font-family: "Dosis", sans-serif;
 }
-.img{ 
-    padding-top: 16px;
-    padding-left: 30px;
-    width: 200px;
-    cursor: pointer;
-    padding-bottom: 10px;
-  }
-  #profile{
-    /* for design */
-      border: 1px solid #000000;
-      border-radius: 10px;
-      background-color: white;
-      margin-top:20px;
-      margin-left: 100px;
-      padding: 10px 40px 10px 40px;
+.container {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../assets/img/bg.png");
+  background-position: center;
+  background-size: cover;
+}
+.img {
+  padding-top: 16px;
+  padding-left: 30px;
+  width: 200px;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+#profile {
+  /* for design */
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 20px;
+  margin-left: 100px;
+  padding: 10px 40px 10px 40px;
 
-      /* for allignment */
-      border: 1px solid #000000;
-    position: absolute;
+  /* for allignment */
+  border: 1px solid #000000;
+  position: absolute;
   top: 0px;
- 
+
   right: 60px;
-    border-radius: 7px;
-    background-color: white;
-    padding: 5px 10px 5px 20px;
-    max-width: 100%;
-    display: flex;
-    height: auto;
-    gap: 10px;
-  }
-  #profile:hover{
-    background-color: rgb(0, 0, 0);
-    color: white;
-    transition: 1s;
-  }
+  border-radius: 7px;
+  background-color: white;
+  padding: 5px 10px 5px 20px;
+  max-width: 100%;
+  display: flex;
+  height: auto;
+  gap: 10px;
+}
+#profile:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: 1s;
+}
 
-  #add{
-    /* for design */
-      border: 1px solid #000000;
-      border-radius: 10px;
-      background-color: white;
-      margin-top: 20px;
-      margin-left: 100px;
-      /* padding: 10px 30px 10px 40px; */
+#add {
+  /* for design */
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 20px;
+  margin-left: 100px;
+  /* padding: 10px 30px 10px 40px; */
 
-      /* for allignment */
-      top: 0px;
-      border: 1px solid #000000;
-      position: absolute;
-      left: 170px;
+  /* for allignment */
+  top: 0px;
+  border: 1px solid #000000;
+  position: absolute;
+  left: 170px;
   /* right: 60px; */
-    border-radius: 7px;
-    background-color: white;
-    padding: 5px 10px 5px 10px;
-  }
-  #add:hover{
-    background-color: rgb(0, 0, 0);
-    color: white;
-    transition: 1s;
-  }
-  .centerflex{
-    /* box-sizing: border-box; */
-      position: absolute;
-      width: 1270px;
-      height: 630px;
-      left: 150px;
-      top: 130px;
-  
-      background-color: rgba(255, 255, 255, 0.4);
-      border: 1px solid #000000;
-      border-radius: 24px; 
-      
-      /* display: flex;
+  border-radius: 7px;
+  background-color: white;
+  padding: 5px 10px 5px 10px;
+}
+#add:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: 1s;
+}
+.centerflex {
+  /* box-sizing: border-box; */
+  position: absolute;
+  width: 1270px;
+  height: 630px;
+  left: 150px;
+  top: 130px;
+
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid #000000;
+  border-radius: 24px;
+
+  /* display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center; */
-      
-  }
-  .addpersonaldetails{
-     display: flex;
-        align-items: center;
-        justify-content: center;
-      
-        border: 1px solid #000000;
-            border-radius: 10px;
-            background-color: white;
-            margin-top: 30px;
-            margin-left: 500px;
-            margin-right: 500px;
-            padding: 10px 10px 10px 10px;
-            font-weight: bold;
-      }
-      .grid{
-        display: flex;
-   
-      }
-.left{
-   display: flex;
-   flex-direction: column;
-   padding-top: 75px;
-    gap: 40px;
-padding-left: 200px;
 }
-#name{
-    padding: 8px 20px 8px 25px;
-    border-radius: 5px;
-width: 300px;
+.addpersonaldetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 30px;
+  margin-left: 500px;
+  margin-right: 500px;
+  padding: 10px 10px 10px 10px;
+  font-weight: bold;
+}
+.grid {
+  display: flex;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  padding-top: 75px;
+  gap: 40px;
+  padding-left: 200px;
+}
+#name {
+  padding: 8px 20px 8px 25px;
+  border-radius: 5px;
+  width: 300px;
 }
 /* #select{
   padding: 8px 20px 8px 25px;
@@ -127,87 +124,114 @@ width: 300px;
 
 
 } */
-#place{
+#place {
   padding: 8px 20px 8px 25px;
   width: 300px;
-    border-radius: 5px;
-
+  border-radius: 5px;
 }
-#no{
+#no {
   padding: 8px 20px 8px 25px;
   width: 300px;
-    border-radius: 5px;
-    
+  border-radius: 5px;
 }
-#insta{
+#insta {
   padding: 8px 20px 8px 25px;
   width: 300px;
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
-.right{
+.right {
   display: flex;
   flex-direction: column;
- float: left;
+  float: left;
   padding-top: 75px;
-   gap: 40px;
-   padding-left: 230px;
-
+  gap: 40px;
+  padding-left: 230px;
 }
-#facebook{
+#facebook {
   padding: 8px 20px 8px 25px;
   border-radius: 5px;
-width: 300px;
+  width: 300px;
 }
-#linkedin{
-padding: 8px 20px 8px 25px;
-width: 300px;
+#linkedin {
+  padding: 8px 20px 8px 25px;
+  width: 300px;
   border-radius: 5px;
-
-
 }
-#photo{
-padding: 8px 20px 8px 25px;
-width: 300px;
+#photo {
+  padding: 8px 20px 8px 25px;
+  width: 300px;
 
-background-color: white;
+  background-color: white;
   border-radius: 5px;
-
 }
-#description{
+#description {
   display: flex;
   align-items: center;
-padding: 40px 20px 40px 25px;
-width: 300px;
+  padding: 40px 20px 40px 25px;
+  width: 300px;
   border-radius: 5px;
-  
 }
- #submit{
-    display: flex;
-       align-items: center;
-       justify-content: center;
-     
-       border: 1px solid #000000;
-           border-radius: 8px;
-           background-color: white;
-           margin-top: 35px;
-           margin-left: 580px;
-           margin-right: 500px;
-           padding: 8px 30px 8px 30px;
-           font-weight: bold;
- }
- #submit:hover{
+#submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background-color: white;
+  margin-top: 35px;
+  margin-left: 580px;
+  margin-right: 500px;
+  padding: 8px 30px 8px 30px;
+  font-weight: bold;
+}
+#submit:hover {
   background-color: rgb(0, 0, 0);
   color: white;
   transition: 1s;
- }
- header{
+}
+header {
   border-bottom: 4px solid white;
- }
+}
 
+.example-chip-list {
+  width: 100%;
+}
 
-
- .example-chip-list {
-   width: 100%;
-
- } 
+.img {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 30px;
+  height: 70px;
+  width: 220px;
+  cursor: pointer;
+}
+.logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 90px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 70px;
+}
+.logout:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: 1s;
+}
+#profilebox {
+  position: absolute;
+  padding-top: 15px;
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: white;
+  height: 130px;
+  width: 230px;
+  margin-left: 1300px;
+  top: 60px;
+  z-index: 3;
+}

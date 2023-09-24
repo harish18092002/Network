@@ -1,64 +1,57 @@
-*{
-    font-family: 'Dosis', sans-serif;
-
+* {
+  font-family: "Dosis", sans-serif;
 }
-body{
-    
-    background-position: center;
-background-size: cover;
-    height: 100vh;
-    width: 100%;
-    background-image: url('../../assets/img/bg.png');
+body {
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../assets/img/bg.png");
 }
-.header{
-    padding-bottom: 15px;
-border-bottom: 4px solid white; 
+.header {
+  padding-bottom: 15px;
+  border-bottom: 4px solid white;
 
-padding-left: 2%;
-padding-right: 5%;
-box-sizing: border-box;
-
-
-       }
-
-       .img{
-    padding-top: 10px;
-        width: 200px;
-        cursor: pointer;
-       }
-.parent{
-box-sizing: border-box;
-position: absolute;
-width: 800px;
-height: 400px;
-left: 400px;
-top: 206px;
-
-background-color: rgba(255, 255, 255, 0.4);
-border: 1px solid #000000;
-border-radius: 24px; 
-
-display: flex;
-flex-direction: column;
-
+  padding-left: 2%;
+  padding-right: 5%;
+  box-sizing: border-box;
 }
 
+.img {
+  padding-top: 10px;
+  width: 200px;
+  cursor: pointer;
+}
+.parent {
+  box-sizing: border-box;
+  position: absolute;
+  width: 800px;
+  height: 400px;
+  left: 400px;
+  top: 206px;
 
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid #000000;
+  border-radius: 24px;
 
-.login{
-border: 1px solid #000000;
-border-radius: 10px;
-background-color: white;
-/* padding: 10px 25px 10px 25px; */
-border-style: solid;
-background-color: white;
-margin-left: 320px;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 45px;
-width: 200px;
-margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background-color: white;
+  /* padding: 10px 25px 10px 25px; */
+  border-style: solid;
+  background-color: white;
+  margin-left: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 200px;
+  margin-top: 10px;
 }
 /* .center{
     display: flex;
@@ -66,104 +59,97 @@ margin-top: 10px;
     justify-content: center;
 } */
 
-#usname{
-    margin-top: 20px;
-padding-left: 20px;
-border-style: solid;
-border-color: black;
-height: 40px;
-width: 380px;
-border: 1px solid #000000;
-border-radius: 10px;
-
+#usname {
+  margin-top: 20px;
+  padding-left: 20px;
+  border-style: solid;
+  border-color: black;
+  height: 40px;
+  width: 380px;
+  border: 1px solid #000000;
+  border-radius: 10px;
 }
-#usname:hover{
-    border-color: rgb(245, 167, 34);
-    box-shadow: 2px 2px 5px rgb(245, 167, 34);
+#usname:hover {
+  border-color: rgb(245, 167, 34);
+  box-shadow: 2px 2px 5px rgb(245, 167, 34);
 }
 
-
-#pw{
-padding-left: 20px;
-    border-style: solid;
-    border-color: black;
-    height: 40px;
-    width: 380px;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    margin-top: 45px;
+#pw {
+  padding-left: 20px;
+  border-style: solid;
+  border-color: black;
+  height: 40px;
+  width: 380px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  margin-top: 45px;
 }
 #pw:hover {
-    border-color: rgb(245, 167, 34);
-    box-shadow: 2px 2px 5px rgb(245, 167, 34);
+  border-color: rgb(245, 167, 34);
+  box-shadow: 2px 2px 5px rgb(245, 167, 34);
 }
 
-#submit{
+#submit {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background-color: white;
+  width: 150px;
+  margin-left: 120px;
+  padding: 10px 40px 10px 40px;
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+#submit:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: 1s;
+}
 
-border: 1px solid #000000;
-border-radius: 10px;
-background-color: white;
-width: 150px;
-margin-left: 120px;
-padding: 10px 40px 10px 40px;
-margin-top: 35px;
-margin-bottom: 10px;
+#signup {
+  border: 1px solid #000000;
+  position: absolute;
+  font-size: large;
+  top: 17px;
+  right: 60px;
+  border-radius: 7px;
+  background-color: white;
+  padding: 7px 40px 7px 40px;
 }
-#submit:hover{
-    background-color: rgb(0, 0, 0);
-    color: white;
-    transition: 1s;
+#signup:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: 1s;
 }
-
-#signup{
-border: 1px solid #000000;
-position: absolute;
-font-size: large;
-top: 17px;
-right: 60px;
-border-radius: 7px;
-background-color: white;
-padding: 7px 40px 7px 40px;
+.border {
+  border-bottom-style: solid;
+  border-bottom-color: white;
+  border-bottom-width: 5px;
 }
-#signup:hover{
-    background-color: rgb(0, 0, 0);
-    color: white;
-    transition: 1s;
-}
-.border{
-        border-bottom-style: solid;
-        border-bottom-color: white;
-        border-bottom-width: 5px;
-       }
 
 /* for username */
 #usname.ng-touched.ng-invalid {
-    border: 1px solid red;
-    box-shadow: 1px 2px 3px red;
-
+  border: 1px solid red;
+  box-shadow: 1px 2px 3px red;
 }
 
 #usname.ng-touched.ng-valid {
-    border: 1px solid green;
-    box-shadow: 1px 2px 3px green;
+  border: 1px solid green;
+  box-shadow: 1px 2px 3px green;
 }
 
 /* for password box */
 #pw.ng-touched.ng-invalid {
-    border: 1px solid red;
-    box-shadow: 1px 2px 3px red;
-    margin-bottom: 0%;
+  border: 1px solid red;
+  box-shadow: 1px 2px 3px red;
+  margin-bottom: 0%;
 }
 
 #pw.ng-touched.ng-valid {
-    border: 1px solid green;
-    box-shadow: 1px 2px 3px green;
+  border: 1px solid green;
+  box-shadow: 1px 2px 3px green;
 }
 .formgroup {
-    margin-left: 230px;
-    display: flex;
-    flex-direction: column;
-
-
-
+  margin-left: 230px;
+  display: flex;
+  flex-direction: column;
 }

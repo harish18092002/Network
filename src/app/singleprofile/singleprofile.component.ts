@@ -1,4 +1,3 @@
-import { E } from '@angular/cdk/keycodes';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute, ParamMap } from '@angular/router';
@@ -10,7 +9,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./singleprofile.component.css']
 })
 export class SingleprofileComponent implements OnInit {
-  // @Input ()receiver : any ;
+
 
   constructor(private router: Router ,private route: ActivatedRoute) { };
 
@@ -18,13 +17,30 @@ export class SingleprofileComponent implements OnInit {
 getid:any;   //this is the particular profile data after filtering with param
 userdata :any;  // this is profile username mail data
 
+
+// for next and prev
+
+  currentIndex: any;
+  currentUser
+
 ngOnInit(): void {
+
+
  this.oninit();
 
   // profile data 
 
      this.userdata = localStorage.getItem('User');
     this.userdata = JSON.parse(this.userdata)
+
+    // for next and prev
+       const check = (x) => x.userid ==this.id;
+        console.log(this.users.some(check));
+        this.currentIndex = this.users.findIndex(
+          (users) => users.userid == this.id
+        );
+        console.log(this.currentIndex);
+        this.currentUser=this.users[this.currentIndex]
 
     }
 
@@ -38,34 +54,15 @@ ngOnInit(): void {
       }});
 
   this.getid = this.users.find((user)=>user.userid === this.id)
-  // this.currentUser: boolean = false;
+
     }
- 
-  //   idvalue:any;
-  // pid:any;
-
-//   index :any;
-// previousprofile(){
-// //  this.idvalue=this.id;
-// //   for(this.idvalue;this.idvalue=0;this.idvalue--){
-// //      console.log("this is id value" + this.idvalue)
-// //     console.log("this is id " + this.id)
-// //     this.getid = this.users.find((user)=>user.userid === this.idvalue)
-// // this.idvalue--;
-// //   }
-
-// const curruser = this.index;
-
-//  const i = this.users.findIndex(function (el) { 
-//   return el ==  curruser
-// })
-// console.log(i)
-// }
 
   
   
 goTohome(){
   this.router.navigate(['./home']);
+      localStorage.removeItem('User');
+        sessionStorage.removeItem('User');
 }
 goToaddprofile(){
   this.router.navigate(['./addprofile']);
@@ -181,95 +178,29 @@ userid  : "2",
 
 ];
 
-
-currentuser : any;
-paramdataid:any;
-
-  //  next() {
-    
-  // this.paramdataid=this.getid.userid
-
-  // // let index = this.users.findIndex(function(ele){
-  // // ele === paramdataid;
-  // // return ele  ;
-  // // })
-  // // console.log("This is index "+index)
-
-  // for ( this.paramdataid; this.paramdataid = 8 ; this.paramdataid++){
-  //     this.paramdataid=this.getid.userid
-  //   this.currentuser =JSON.stringify(this.users[this.paramdataid]);
-  // // let curr = this. currentuser;
-  // console.log("This param data id is "+ this.paramdataid);  
-  // return this.paramdataid
-  // }
-  // console.log("This is current user "+this.currentuser)
-        
-//   //   }
-
-
-// currentUser =this.users[1];
-
-//     // setUser(user) {
-//     //     this.currentUser = user;
-//     // }
-
-//     prev() {
-//       // this.getid  =false;
-//         if (this.currentUser !== this.users[0]) {
-//             const currUser = this.getid;
-//             const i = this.users.findIndex(function (el) {
-//                 return el === currUser;
-//             });
-//             this.currentUser = this.users[i - 1];
-             
-//         }
-//       console.log(this.currentUser)
-//     }
-
-//     next() {
-//         if (this.currentUser !== this.users[this.users.length - 1]) {
-//             const currUser = this.currentUser;
-//             const i = this.users.findIndex(function (el) {
-//                 return el === currUser;
-//             });
-//             this.currentUser = this.users[i + 1];
-            
-//         }
-//        console.log(this.currentUser)
-//     }
-
-currentUser =this.users[1];
-
-
-    setUser(user) {
-        this.currentUser = user;
+  prev() {
+    if (this.currentUser=== this.getid) {
+      const currUser = this.currentUser;
+      const i = this.users.findIndex(function (el) {
+        return el === currUser;
+      });
+      this.currentUser = this.users[i - 1];
+      this.getid = this.currentUser;
     }
+    console.log(this.currentUser);
+  }
 
-    prev() {
-        if (this.currentUser !== this.users[0]) {
-            const currUser = this.currentUser;
-            const i = this.users.findIndex(function (el) {
-                return el === currUser;
-            });
-            this.currentUser = this.users[i - 1];
-             
-        }
-      console.log(this.currentUser)
-      this.currentUser = this.getid;
-      
+  next() {
+    if (this.currentUser !== this.users[this.users.length - 1]) {
+      const currUser = this.currentUser;
+      const i = this.users.findIndex(function (el) {
+        return el === currUser;
+      });
+      this.currentUser = this.users[i + 1];
+      this.getid = this.currentUser;
     }
-
-    next() {
-        if (this.currentUser !== this.users[this.users.length - 1]) {
-            const currUser = this.currentUser;
-            const i = this.users.findIndex(function (el) {
-                return el === currUser;
-            });
-            this.currentUser = this.users[i + 1];
-             
-        }
-       console.log(this.currentUser)
-    }
+    console.log(this.currentUser);
+  }
 
 
 }

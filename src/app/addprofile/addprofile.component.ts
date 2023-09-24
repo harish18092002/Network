@@ -115,13 +115,17 @@ export class AddprofileComponent implements OnInit {
 
   //   return this.allFruits.filter(fruit => fruit.toLowerCase().includes(filterValue));
   // }
-
-
+showelements : boolean = false;
+userdata: any;
 
   ngOnInit(): void {
+       this.userdata = localStorage.getItem('User');
+    this.userdata = JSON.parse(this.userdata)
   }
 goTohome(){
   this.router.navigate(['./home']); 
+      localStorage.removeItem('User');
+        sessionStorage.removeItem('User');
 
 }
 goToprofile(){

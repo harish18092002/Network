@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({ 
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  styleUrls: ['./signup.component.css'] 
 })
 export class SignupComponent implements OnInit {
   
@@ -18,13 +18,13 @@ export class SignupComponent implements OnInit {
   }
 
 constructor(private router: Router) {}
-  goToprofile() {
-    this.router.navigate(['./profile']);
+  goTologin() {
+    this.router.navigate(['./login']);
   }
  onSubmit(){
  localStorage.setItem('User', JSON.stringify(this.signupform.value));
 this.signupform.reset(); 
-this.goToprofile();
+this.goTologin();
 
  }
 
